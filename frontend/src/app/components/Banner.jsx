@@ -7,6 +7,7 @@ const Banner = () => {
   const [isDragging, setIsDragging] = useState(false)
   const [startX, setStartX] = useState(0)
   const [dragOffset, setDragOffset] = useState(0)
+  const [animate, setAnimate] = useState(false) // New state to trigger animations
   const sliderRef = useRef(null)
   const autoPlayRef = useRef(null)
 
@@ -14,12 +15,12 @@ const Banner = () => {
     {
       id: 1,
       company: "PRODSOL BIOTECH PVT. LTD.",
-      title: "Your Trusted Partner in Cosmetic",
+      title: "Trusted Partner in Cosmetic",
       subtitle: "Contract Manufacturing",
       tagline: "FROM CONCEPT TO COSMETIC PERFECTION",
       imagePosition: "right",
-      image: "/1.webp",
-      bgColor: "bg-white"
+      image: "/3.webp",
+      bgColor: "bg-[#EAEFEF]/40"
     },
     {
       id: 2,
@@ -28,10 +29,23 @@ const Banner = () => {
       subtitle: "For Modern Beauty Brands",
       tagline: "WHERE SCIENCE MEETS BEAUTY",
       imagePosition: "left",
-      image: "/2.webp",
-      bgColor: "bg-white"
+      image: "/4.webp",
+      bgColor: "bg-[#E9E3DF]/40"
     }
   ]
+
+  // Trigger animations when slide changes
+  useEffect(() => {
+    // Reset animation state
+    setAnimate(false)
+    
+    // Small timeout to ensure reset happens before triggering new animation
+    const timeout = setTimeout(() => {
+      setAnimate(true)
+    }, 50)
+
+    return () => clearTimeout(timeout)
+  }, [currentSlide])
 
   // Auto-play functionality
   useEffect(() => {
@@ -102,8 +116,28 @@ const Banner = () => {
     startAutoPlay()
   }
 
+  // Function to get animation classes based on animate state
+  const getAnimationClass = (baseClass, delay = '') => {
+    if (!animate) return 'opacity-0'
+    return `${baseClass} ${delay}`
+  }
+
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full overflow-hidden h-auto ">
+      {/* Decorative Elements */}
+      <div className="absolute top-20 left-10 z-10 opacity-30 hidden lg:block animate-float">
+        <Image src="/ele1.png" alt="decorative element" width={80} height={80} className="object-contain" />
+      </div>
+      <div className="absolute bottom-20 right-10 z-10 opacity-30 hidden lg:block animate-float-delayed">
+        <Image src="/ele2.png" alt="decorative element" width={60} height={60} className="object-contain" />
+      </div>
+      <div className="absolute top-40 right-20 z-10 opacity-20 hidden lg:block animate-spin-slow">
+        <Image src="/ele1.png" alt="decorative element" width={40} height={40} className="object-contain" />
+      </div>
+      <div className="absolute bottom-40 left-20 z-10 opacity-20 hidden lg:block animate-pulse-slow">
+        <Image src="/ele2.png" alt="decorative element" width={50} height={50} className="object-contain" />
+      </div>
+
       {/* Slider Container */}
       <div
         ref={sliderRef}
@@ -122,85 +156,85 @@ const Banner = () => {
         {slides.map((slide, index) => (
           <div
             key={slide.id}
-            className={`w-full shrink-0 ${slide.bgColor}`}
+            className={`w-full shrink-0 ${slide.bgColor} relative`}
           >
             {/* Mobile Layout (stacked) */}
             <div className="block lg:hidden">
-              {/* Image first - full width, no background */}
-              <div className="w-full">
-                <div className="relative w-full aspect-[4/3] ">
-                  <Image
-                    src={slide.image}
-                    alt={`${slide.company} - ${slide.title}`}
-                    fill
-                    className="object-cover p-2"
-                    priority={index === 0}
-                    sizes="100vw"
-                  />
-                </div>
-              </div>
-              
               {/* Content below image */}
-              <div className="px-6 py-10 md:px-12 md:py-16">
+              <div className="text-center px-6 py-10 md:px-12 md:py-16 relative">
                 <div className="max-w-2xl mx-auto">
-                  <h4 className="text-sm tracking-[0.2em] text-gray-500 font-light uppercase mb-3">
-                    {slide.tagline}
-                  </h4>
-                  
-                  <h2 className="text-sm font-medium text-gray-600 tracking-wider mb-4">
-                    {slide.company}
-                  </h2>
-                  
                   <h1 className="font-light">
-                    <span className="block text-3xl md:text-4xl text-gray-900 leading-tight">
+                    <span className={`head block text-5xl md:text-6xl  leading-tight ${getAnimationClass('animate-fade-in-up', 'animation-delay-400')}`}>
                       {slide.title}
                     </span>
-                    <span className="block text-2xl md:text-3xl text-gray-700 mt-2 font-normal">
+                    </h1>
+                    <h4 className={`text-sm tracking-[0.2em] text-gray-500 font-light uppercase my-2 ${getAnimationClass('animate-fade-in-up')}`}>
+                      {slide.tagline}
+                    </h4>
+                    
+                    <h2 className={`text-sm font-medium text-gray-600 tracking-wider mb-4 ${getAnimationClass('animate-fade-in-up', 'animation-delay-200')}`}>
+                      {slide.company}
+                    </h2>
+                    <span className={`block text-xl md:text-3xl text-gray-700 mt-2 font-normal ${getAnimationClass('animate-fade-in-up', 'animation-delay-600')}`}>
                       {slide.subtitle}
                     </span>
-                  </h1>
+                  
 
-                  <div className="w-16 h-px bg-gray-300 my-6"></div>
+                  <div className={`w-16 h-px bg-gray-300 my-3 ${getAnimationClass('animate-scale-x', 'animation-delay-800')} mx-auto`}></div>
 
-                  <button className="group inline-flex items-center gap-2 text-sm tracking-wider text-gray-700 hover:text-gray-900 transition-colors duration-300">
+                  <button className={`group inline-flex items-center gap-2 text-sm tracking-wider text-gray-700 hover:text-gray-900 transition-colors duration-300 ${getAnimationClass('animate-fade-in-up', 'animation-delay-1000')}`}>
                     <span>DISCOVER MORE</span>
                     <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
                   </button>
                 </div>
+              </div> 
+              {/* Image first - full width, no background */}
+              <div className="w-full relative">
+                <div className={`relative w-full aspect-[4/3] ${getAnimationClass('animate-zoom-in')}`}>
+                  <Image
+                    src={slide.image}
+                    alt={`${slide.company} - ${slide.title}`}
+                    width={1080} 
+                    height={1440}
+                    className="object-cover p-2"
+                    priority={index === 0}
+                    sizes="100vw"
+                  />
+                </div>
               </div>
             </div>
 
             {/* Desktop Layout (side by side) */}
-            <div className={`hidden lg:flex min-h-screen items-center px-16 xl:px-24 ${
+            <div className={`hidden lg:flex items-center ${
               slide.imagePosition === 'right' 
                 ? 'flex-row' 
                 : 'flex-row-reverse'
             }`}>
               {/* Content Side */}
-              <div className={`w-1/2 ${slide.imagePosition === 'right' ? 'pr-12' : 'pl-12'}`}>
+              <div className={`w-1/2 px-4 text-left lg:text-center sm:px-6 lg:px-12 xl:px-24 2xl:px-40 ${slide.imagePosition === 'right' ? 'pr-12' : 'pl-12'}`}>
                 <div className="space-y-4">
-                  <h4 className="text-xs tracking-[0.2em] text-gray-500 font-light uppercase">
+                  <h4 className={`text-xs tracking-[0.2em] text-gray-500 font-light uppercase ${getAnimationClass('animate-fade-in-up')}`}>
                     {slide.tagline}
                   </h4>
                   
-                  <h2 className="text-sm font-medium text-gray-600 tracking-wider">
+                  <h2 className={`text-sm font-medium text-gray-600 tracking-wider ${getAnimationClass('animate-fade-in-up', 'animation-delay-200')}`}>
                     {slide.company}
                   </h2>
                   
                   <h1 className="font-light">
-                    <span className="block text-4xl xl:text-5xl text-gray-900 leading-tight">
+                    <span className={`head block text-4xl xl:text-6xl 2xl:text-8xl  leading-tight ${getAnimationClass('animate-fade-in-up', 'animation-delay-400')}`}>
                       {slide.title}
                     </span>
-                    <span className="block text-3xl xl:text-4xl text-gray-700 mt-2 font-normal">
+                    <span className={`block text-3xl xl:text-4xl text-gray-700 mt-2 font-normal `}>
                       {slide.subtitle}
                     </span>
                   </h1>
 
-                  <div className="w-16 h-px bg-gray-300 my-6"></div>
+                  <div className={`w-16 h-px bg-gray-300 my-6 ${getAnimationClass('animate-scale-x', 'animation-delay-800')}`}></div>
 
-                  <button className="group inline-flex items-center gap-2 text-sm tracking-wider text-gray-700 hover:text-gray-900 transition-colors duration-300">
+                  <button className={`group inline-flex items-center gap-2 text-sm tracking-wider text-gray-700 hover:text-gray-900 transition-colors duration-300 ${getAnimationClass('animate-fade-in-up', 'animation-delay-1000')}`}>
                     <span>DISCOVER MORE</span>
                     <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -210,12 +244,13 @@ const Banner = () => {
               </div>
 
               {/* Image Side - no background, merged with layout */}
-              <div className="w-1/2">
-                <div className="relative aspect-[4/3] xl:aspect-square">
+              <div className="w-1/2 relative">
+                <div className={`relative ${getAnimationClass('animate-zoom-in')}`}>
                   <Image
                     src={slide.image}
                     alt={`${slide.company} - ${slide.title}`}
-                    fill
+                    width={1080} 
+                    height={1440}
                     className="object-cover"
                     priority={index === 0}
                     sizes="50vw"
@@ -223,12 +258,35 @@ const Banner = () => {
                 </div>
               </div>
             </div>
+
+            {/* Slide-specific decorative elements */}
+            {index === 0 && (
+              <>
+                <div className="absolute top-10 left-10 z-20 opacity-20 hidden lg:block animate-pulse-slow">
+                  <Image src="/ele1.png" alt="decorative element" width={30} height={30} />
+                </div>
+                <div className="absolute bottom-10 right-10 z-20 opacity-20 hidden lg:block animate-spin-slow">
+                  <Image src="/ele2.png" alt="decorative element" width={40} height={40} />
+                </div>
+              </>
+            )}
+            
+            {index === 1 && (
+              <>
+                <div className="absolute top-20 right-20 z-20 opacity-20 hidden lg:block animate-bounce-slow">
+                  <Image src="/ele1.png" alt="decorative element" width={35} height={35} />
+                </div>
+                <div className="absolute bottom-20 left-20 z-20 opacity-20 hidden lg:animate-pulse">
+                  <Image src="/ele2.png" alt="decorative element" width={45} height={45} />
+                </div>
+              </>
+            )}
           </div>
         ))}
       </div>
 
       {/* Slide Indicators - repositioned for mobile */}
-      <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-3 z-10">
+      <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-3 z-30">
         {slides.map((_, index) => (
           <button
             key={index}
@@ -245,6 +303,106 @@ const Banner = () => {
           {String(currentSlide + 1).padStart(2, '0')} / {String(slides.length).padStart(2, '0')}
         </span>
       </div>
+
+      {/* Animation keyframes remain the same */}
+      <style jsx global>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes spin-slow {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        @keyframes scaleX {
+          from {
+            transform: scaleX(0);
+            opacity: 0;
+          }
+          to {
+            transform: scaleX(1);
+            opacity: 1;
+          }
+        }
+        
+        @keyframes zoomIn {
+          from {
+            opacity: 0;
+            transform: scale(0.9);
+          }
+          to {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+        
+        .animate-float {
+          animation: float 6s ease-in-out infinite;
+        }
+        
+        .animate-float-delayed {
+          animation: float 7s ease-in-out infinite;
+          animation-delay: 2s;
+        }
+        
+        .animate-spin-slow {
+          animation: spin-slow 20s linear infinite;
+        }
+        
+        .animate-pulse-slow {
+          animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        
+        .animate-bounce-slow {
+          animation: bounce 3s infinite;
+        }
+        
+        .animate-fade-in-up {
+          animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        .animate-scale-x {
+          animation: scaleX 0.8s ease-out forwards;
+          transform-origin: left;
+        }
+        
+        .animate-zoom-in {
+          animation: zoomIn 1s ease-out forwards;
+        }
+        
+        .animation-delay-200 {
+          animation-delay: 0.2s;
+        }
+        
+        .animation-delay-400 {
+          animation-delay: 0.4s;
+        }
+        
+        .animation-delay-600 {
+          animation-delay: 0.6s;
+        }
+        
+        .animation-delay-800 {
+          animation-delay: 0.8s;
+        }
+        
+        .animation-delay-1000 {
+          animation-delay: 1s;
+        }
+      `}</style>
     </div>
   )
 }

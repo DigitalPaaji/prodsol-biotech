@@ -51,7 +51,7 @@ const Navbar = () => {
           <div className="shrink-0">
             <Link
               href="/"
-              className="text-2xl lg:text-3xl font-bold tracking-tight group"
+              className="text-2xl lg:text-3xl font-bold tracking-tight group text-[#109cc7]"
             >
                 PRODSOL BIOTECH
              
@@ -65,10 +65,10 @@ const Navbar = () => {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="relative px-4 py-2 text-black/80 hover:text-black text-sm font-medium transition-all duration-200 rounded-full hover:bg-black/5 group"
+                  className="relative px-4 py-2 text-black/80 hover:text-black text-base font-medium transition-all duration-200 group"
                 >
                   {link.name}
-                  <span className="absolute inset-x-4 -bottom-0 h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left" />
+                  <span className="absolute inset-x-4 bottom-0 h-0.5 bg-[#109cc7] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left" />
                 </Link>
               ))}
             </div>
@@ -109,7 +109,7 @@ const Navbar = () => {
       {/* Mobile Menu Dropdown (Glass morphism) */}
       <div
         className={`${
-          isOpen ? "max-h-[32rem] opacity-100" : "max-h-0 opacity-0"
+          isOpen ? "max-h-128 opacity-100" : "max-h-0 opacity-0"
         } lg:hidden overflow-hidden transition-all duration-400 ease-in-out backdrop-blur-xl bg-white/90 border-t border-black/5 shadow-xl`}
       >
         <div className="px-4 pt-4 pb-5 space-y-2">
