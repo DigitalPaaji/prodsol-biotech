@@ -20,7 +20,7 @@ export default function ServicesSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
           
           {/* Main Left Card (Reverted to single static image that zooms slightly) */}
-          <div className="lg:col-span-5 flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group cursor-pointer hover:shadow-md transition-all duration-300">
+          <div className="lg:col-span-5 flex flex-col bg-white overflow-hidden shadow-sm border border-gray-100 group cursor-pointer hover:shadow-md transition-all duration-300">
             <div className="h-64 sm:h-80 w-full relative bg-gray-200 overflow-hidden">
               <img 
                 src="https://images.unsplash.com/photo-1629198688000-71f23e745b6e?q=80&w=800&auto=format&fit=crop" 
@@ -46,7 +46,7 @@ export default function ServicesSection() {
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
             
             {/* Card 1: Contract Manufacturing (Hover reveals image) */}
-            <div className="relative p-8 rounded-2xl flex flex-col shadow-sm border border-gray-100 bg-white overflow-hidden group cursor-pointer hover:shadow-md transition-all duration-500">
+            <div className="relative p-8  flex flex-col shadow-sm border border-gray-100 bg-white overflow-hidden group cursor-pointer hover:shadow-md transition-all duration-500">
               <div className="absolute inset-0 z-0">
                 <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?q=80&w=800&auto=format&fit=crop" alt="Manufacturing" className="w-full h-full object-cover opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" />
                 <div className="absolute inset-0 bg-slate-900/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -65,7 +65,7 @@ export default function ServicesSection() {
             </div>
 
             {/* Card 2: Product Development (Hover reveals image) */}
-            <div className="relative p-8 rounded-2xl flex flex-col shadow-sm border border-gray-100 bg-white overflow-hidden group cursor-pointer hover:shadow-md transition-all duration-500">
+            <div className="relative p-8  flex flex-col shadow-sm border border-gray-100 bg-white overflow-hidden group cursor-pointer hover:shadow-md transition-all duration-500">
               <div className="absolute inset-0 z-0">
                 <img src="https://images.unsplash.com/photo-1615397323218-12c82c35ea90?q=80&w=800&auto=format&fit=crop" alt="Development" className="w-full h-full object-cover opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" />
                 <div className="absolute inset-0 bg-slate-900/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -84,7 +84,7 @@ export default function ServicesSection() {
             </div>
 
             {/* Card 3: Regulatory & Compliance (Hover reveals image) */}
-             <div className="relative p-8 rounded-2xl flex flex-col shadow-sm border border-gray-100 bg-white overflow-hidden group cursor-pointer hover:shadow-md transition-all duration-500">
+             <div className="relative p-8  flex flex-col shadow-sm border border-gray-100 bg-white overflow-hidden group cursor-pointer hover:shadow-md transition-all duration-500">
               <div className="absolute inset-0 z-0">
                 <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=800&auto=format&fit=crop" alt="Compliance" className="w-full h-full object-cover opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" />
                 <div className="absolute inset-0 bg-slate-900/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -103,7 +103,7 @@ export default function ServicesSection() {
             </div>
 
             {/* Card 4: Logistics & Delivery (Hover reveals image) */}
-            <div className="relative p-8 rounded-2xl flex flex-col shadow-sm border border-gray-100 bg-white overflow-hidden group cursor-pointer hover:shadow-md transition-all duration-500">
+            <div className="relative p-8  flex flex-col shadow-sm border border-gray-100 bg-white overflow-hidden group cursor-pointer hover:shadow-md transition-all duration-500">
               <div className="absolute inset-0 z-0">
                 <img src="https://images.unsplash.com/photo-1586528116311-ad8ed7c862bc?q=80&w=800&auto=format&fit=crop" alt="Logistics" className="w-full h-full object-cover opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" />
                 <div className="absolute inset-0 bg-slate-900/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
