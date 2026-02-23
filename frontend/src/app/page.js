@@ -4,6 +4,7 @@ import Banner from './components/Banner'
 import About from './components/About'
 import ServicesProcess from './components/Process'
 import Footer from './components/Footer'
+import ServicesSection from './components/ServicesSection'
 function page() {
   return (
     <div>
@@ -11,6 +12,7 @@ function page() {
       <Banner/>
 <About/>
 <ServicesProcess/>
+<ServicesSection />
 <Footer/>
     </div>
   )
