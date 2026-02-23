@@ -51,7 +51,7 @@ const Navbar = () => {
           <div className="shrink-0">
             <Link
               href="/"
-              className="text-2xl lg:text-3xl font-bold tracking-tight group text-[#109cc7]"
+              className="text-2xl lg:text-3xl font-bold tracking-tight group "
             >
                 PRODSOL BIOTECH
              
