@@ -175,7 +175,7 @@ const MinimalistShopByCategory = () => {
      <div className="relative w-16 h-16 mx-auto mb-3 ">
        <Image src="/ele1.png" alt="" width={64} height={64} className="object-contain" />
      </div>
-     <div className="text-2xl font-light text-[#109cc7] mb-1">Purpose</div>
+     <div className="text-2xl font-light text-[#427A43] mb-1">Purpose</div>
      <div className="text-xs tracking-wider text-gray-500 uppercase">
        Sustainability • Quality • Transparency
      </div>
@@ -185,7 +185,7 @@ const MinimalistShopByCategory = () => {
      <div className="relative w-16 h-16 mx-auto mb-3 ">
        <Image src="/ele2.png" alt="" width={64} height={64} className="object-contain" />
      </div>
-     <div className="text-2xl font-light text-[#109cc7] mb-1">End-to-End</div>
+     <div className="text-2xl font-light text-[#427A43] mb-1">End-to-End</div>
      <div className="text-xs tracking-wider text-gray-500 uppercase">
        Concept → Formulation → Packaging → Logistics
      </div>
@@ -195,7 +195,7 @@ const MinimalistShopByCategory = () => {
      <div className="relative w-16 h-16 mx-auto mb-3 ">
        <Image src="/ele1.png" alt="" width={64} height={64} className="object-contain" />
      </div>
-     <div className="text-2xl font-light text-[#109cc7] mb-1">Agile</div>
+     <div className="text-2xl font-light text-[#427A43] mb-1">Agile</div>
      <div className="text-xs tracking-wider text-gray-500 uppercase">
        Fast Response • Consistent Timelines
      </div>
@@ -205,7 +205,7 @@ const MinimalistShopByCategory = () => {
      <div className="relative w-16 h-16 mx-auto mb-3">
        <Image src="/ele2.png" alt="" width={64} height={64} className="object-contain" />
      </div>
-     <div className="text-2xl font-light text-[#109cc7] mb-1">Trusted</div>
+     <div className="text-2xl font-light text-[#427A43] mb-1">Trusted</div>
      <div className="text-xs tracking-wider text-gray-500 uppercase">
        Scalable Solutions • 50+ Global Brands
      </div>

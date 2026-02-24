@@ -51,7 +51,7 @@ const Navbar = () => {
           <div className="shrink-0">
             <Link
               href="/"
-              className="text-2xl lg:text-3xl font-bold tracking-tight group "
+              className="text-2xl text-[#427A43] lg:text-3xl font-bold tracking-tight group "
             >
                 PRODSOL BIOTECH
              
@@ -68,7 +68,7 @@ const Navbar = () => {
                   className="relative px-4 py-2 text-black/80 hover:text-black text-base font-medium transition-all duration-200 group"
                 >
                   {link.name}
-                  <span className="absolute inset-x-4 bottom-0 h-0.5 bg-[#109cc7] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left" />
+                  <span className="absolute inset-x-4 bottom-0 h-0.5 bg-[#427A43] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left" />
                 </Link>
               ))}
             </div>
