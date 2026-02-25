@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 export default function ServicesSection() {
   return (
@@ -22,7 +23,7 @@ export default function ServicesSection() {
           {/* Main Left Card (Reverted to single static image that zooms slightly) */}
           <div className="lg:col-span-5 flex flex-col bg-white overflow-hidden shadow-sm border border-gray-100 group cursor-pointer hover:shadow-md transition-all duration-300">
             <div className="h-64 sm:h-80 w-full relative bg-gray-200 overflow-hidden">
-              <img src="/s1.webp" 
+              <Image fill src="/s1.webp" 
                 alt="Cosmetic Bottles" 
                 className="w-full h-full object-cover object-top" 
               />
@@ -47,7 +48,7 @@ Ready-to-market cosmetic products customized with your branding. Ideal for start
             {/* Card 1: Contract Manufacturing (Hover reveals image) */}
             <div className="relative p-8  flex flex-col shadow-sm border border-gray-100 bg-white overflow-hidden group cursor-pointer hover:shadow-md transition-all duration-500">
               <div className="absolute inset-0 z-0">
-                <img src="/s6.webp" alt="Manufacturing" className="w-full h-full object-cover opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" />
+                <Image fill src="/s6.webp" alt="Manufacturing" className="w-full h-full object-cover opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" />
                 <div className="absolute inset-0 bg-linear-to-br from-black/40 via-black/40 to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
               <div className="relative z-10 flex flex-col h-full">
@@ -58,7 +59,7 @@ Ready-to-market cosmetic products customized with your branding. Ideal for start
               Large-scale, high-quality production facilities built to GMP, ISO, and FDA standards. Reliable, consistent, and scalable manufacturing for established brands.
                 </p>
                 <div className="flex justify-end mt-auto">
-                  <ArrowRight className="w-6 h-6 text-[#427A43] group-hover:text-orange-400 group-hover:translate-x-2 transition-all duration-300" />
+                  <ArrowRight className="w-6 h-6 text-[#427A43]  group-hover:translate-x-2 transition-all duration-300" />
                 </div>
               </div>
             </div>
@@ -66,7 +67,7 @@ Ready-to-market cosmetic products customized with your branding. Ideal for start
             {/* Card 2: Product Development (Hover reveals image) */}
             <div className="relative p-8  flex flex-col shadow-sm border border-gray-100 bg-white overflow-hidden group cursor-pointer hover:shadow-md transition-all duration-500">
               <div className="absolute inset-0 z-0">
-                <img 
+                <Image fill 
               src="/s7.webp"
                 alt="Development" className="w-full h-full object-cover opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" />
                 <div className="absolute inset-0 bg-linear-to-b from-black/50 via-black/40 to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -79,7 +80,7 @@ Ready-to-market cosmetic products customized with your branding. Ideal for start
                From concept to final product, our experts guide you through formulation, testing, stability studies, and regulatory approvals.
                 </p>
                 <div className="flex justify-end mt-auto">
-                  <ArrowRight className="w-6 h-6 text-[#427A43] group-hover:text-orange-400 group-hover:translate-x-2 transition-all duration-300" />
+                  <ArrowRight className="w-6 h-6 text-[#427A43]  group-hover:translate-x-2 transition-all duration-300" />
                 </div>
               </div>
             </div>
@@ -87,7 +88,7 @@ Ready-to-market cosmetic products customized with your branding. Ideal for start
             {/* Card 3: Regulatory & Compliance (Hover reveals image) */}
              <div className="relative p-8  flex flex-col shadow-sm border border-gray-100 bg-white overflow-hidden group cursor-pointer hover:shadow-md transition-all duration-500">
               <div className="absolute inset-0 z-0">
-                <img src="/s4.webp" alt="Compliance" className="w-full h-full object-cover opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" />
+                <Image fill src="/s4.webp" alt="Compliance" className="w-full h-full object-cover opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" />
                 <div className="absolute inset-0 bg-linear-to-b from-black/70 via-text-black/50 to-text-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
               <div className="relative z-10 flex flex-col h-full">
@@ -98,7 +99,7 @@ Ready-to-market cosmetic products customized with your branding. Ideal for start
                 Expert support in documentation, claims, and certifications to ensure your products meet global regulatory standards.
                 </p>
                 <div className="flex justify-end mt-auto">
-                  <ArrowRight className="w-6 h-6 text-[#427A43] group-hover:text-orange-400 group-hover:translate-x-2 transition-all duration-300" />
+                  <ArrowRight className="w-6 h-6 text-[#427A43]  group-hover:translate-x-2 transition-all duration-300" />
                 </div>
               </div>
             </div>
@@ -106,10 +107,10 @@ Ready-to-market cosmetic products customized with your branding. Ideal for start
             {/* Card 4: Logistics & Delivery (Hover reveals image) */}
             <div className="relative p-8  flex flex-col shadow-sm border border-gray-100 bg-white overflow-hidden group cursor-pointer hover:shadow-md transition-all duration-500">
               <div className="absolute inset-0 z-0">
-                <img src="/s3.webp" alt="Logistics" className="w-full h-full object-cover opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" />
-                <div className="absolute inset-0 bg-linear-to-br from-black/60 via-black/30 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <Image fill src="/s9.webp" alt="Logistics" className="w-full h-full object-cover opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" />
+                <div className="absolute inset-0 bg-linear-to-b from-black/60 via-black/50 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
-              <div className="relative z-10 flex flex-col h-full">
+              <div className="rela tive z-10 flex flex-col h-full">
                 <h3 className="text-lg font-medium uppercase mb-4 text-[#427A43] group-hover:text-white transition-colors duration-300">
                   Logistics & Delivery
                 </h3>
@@ -117,7 +118,7 @@ Ready-to-market cosmetic products customized with your branding. Ideal for start
                 Efficient supply chain management and global delivery solutions to ensure your products reach the market on time, every time.
                 </p>
                 <div className="flex justify-end mt-auto">
-                  <ArrowRight className="w-6 h-6 text-[#427A43] group-hover:text-orange-400 group-hover:translate-x-2 transition-all duration-300" />
+                  <ArrowRight className="w-6 h-6 text-[#427A43]  group-hover:translate-x-2 transition-all duration-300" />
                 </div>
               </div>
             </div>

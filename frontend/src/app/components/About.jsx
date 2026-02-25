@@ -23,16 +23,7 @@ const About = () => {
       title: "Quality Assurance",
       description: "Strict quality control, rigorous testing, and compliance with industry standards."
     },
-    {
-      icon: "/ele1.png",
-      title: "End-to-End Contract Manufacturing",
-      description: "Complete support from product concept and formulation to final cosmetic production."
-    },
-    {
-      icon: "/ele1.png",
-      title: "Certified & Sustainable Manufacturing",
-      description: "GMP, ISO, and FDA-approved processes with cruelty-free, vegan, and eco-friendly practices."
-    }
+   
   ];
 
   return (

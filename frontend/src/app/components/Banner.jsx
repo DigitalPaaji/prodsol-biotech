@@ -20,7 +20,7 @@ const Banner = () => {
       tagline: "FROM CONCEPT TO COSMETIC PERFECTION",
       imagePosition: "right",
       image: "/3.webp",
-      bgColor: "bg-[#EAEFEF]/40"
+      bgColor: "bg-[#EAEFEF]/60"
     },
     {
       id: 2,
@@ -30,7 +30,7 @@ const Banner = () => {
       tagline: "WHERE SCIENCE MEETS BEAUTY",
       imagePosition: "left",
       image: "/4.webp",
-      bgColor: "bg-[#E9E3DF]/40"
+      bgColor: "bg-[#E9E3DF]/60"
     }
   ]
 
@@ -192,7 +192,7 @@ const Banner = () => {
               </div> 
               {/* Image first - full width, no background */}
               <div className="w-full relative">
-                <div className={`relative w-full aspect-[4/3] ${getAnimationClass('animate-zoom-in')}`}>
+                <div className={`relative w-full aspect-4/3 ${getAnimationClass('animate-zoom-in')}`}>
                   <Image
                     src={slide.image}
                     alt={`${slide.company} - ${slide.title}`}
@@ -293,8 +293,8 @@ const Banner = () => {
             onClick={() => goToSlide(index)}
             className={`transition-all duration-500 ${
               currentSlide === index 
-                ? 'w-8 h-[2px] bg-gray-800' 
-                : 'w-6 h-[2px] bg-gray-300 hover:bg-gray-400'
+                ? 'w-8 h-0.5 bg-gray-800' 
+                : 'w-6 h-0.5 bg-gray-300 hover:bg-gray-400'
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
