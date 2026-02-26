@@ -7,16 +7,17 @@ import CertificationSection from './components/CertificationSection'
 import ProductRange from './components/ProductRange'
 import WhyChooseUs from './components/Why'
 import About from './components/About'
+import PackagingInnovation from './components/Packing'
 
 function page() {
   return (
     <div>
       <Navbar/>
       <Banner/>
-     <About/>
+     {/* <About/> */}
 <ServicesSection />
 
-
+<PackagingInnovation/>
 
 
 <ProductRange />

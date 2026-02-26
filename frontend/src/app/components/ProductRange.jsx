@@ -25,7 +25,7 @@ export default function ProductRange() {
           Our Product Range
           <span className="block w-16 h-0.5 bg-black absolute -bottom-3 left-1/2 transform -translate-x-1/2"></span>
         </h2>
-        <p className="text-gray-600 max-w-3xl mx-auto mt-6 text-sm md:text-base leading-relaxed">
+        <p className="text-gray-600 max-w-3xl mx-auto mt-4 text-sm md:text-base leading-relaxed">
           Comprehensive categories covering beauty, personal, and specialized care.
         </p>
       </div>

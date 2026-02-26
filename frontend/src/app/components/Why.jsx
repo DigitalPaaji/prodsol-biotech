@@ -51,7 +51,7 @@ export default function WhyChooseUs() {
       {/* Main Heading Area */}
       <div className="text-center w-full space-y-8 mb-16">
               <div className="mb-12">
-        <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#427A43] border-b border-gray-200 pb-2">
+        <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#007e44] border-b border-gray-200 pb-2">
           The Prodsol Standard
         </span>
       </div>
@@ -75,7 +75,7 @@ export default function WhyChooseUs() {
             className="group p-10 border-r border-b border-gray-100 hover:bg-[#f9f9f9] transition-colors duration-300 relative overflow-hidden"
           >
             {/* Minimal Icon Representation */}
-            <div className="mb-8 text-[#427A43] group-hover:scale-110 transition-transform duration-500 origin-left">
+            <div className="mb-8 text-[#007e44] group-hover:scale-110 transition-transform duration-500 origin-left">
               <Icon size={32} strokeWidth={1.2} />
             </div>
 

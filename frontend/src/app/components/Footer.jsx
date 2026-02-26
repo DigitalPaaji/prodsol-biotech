@@ -75,15 +75,15 @@ const footerSections = {
             
             {/* Contact Info */}
             <div className="space-y-3">
-              <div className="flex items-center space-x-3 text-gray-800 hover:text-[#427A43] transition-colors duration-300">
+              <div className="flex items-center space-x-3 text-gray-800 hover:text-[#007e44] transition-colors duration-300">
                 <FiPhone className="w-5 h-5" />
                 <span>+1 (555) 123-4567</span>
               </div>
-              <div className="flex items-center space-x-3 text-gray-800 hover:text-[#427A43] transition-colors duration-300">
+              <div className="flex items-center space-x-3 text-gray-800 hover:text-[#007e44] transition-colors duration-300">
                 <FiMail className="w-5 h-5" />
                 <span>hello@cardcompany.com</span>
               </div>
-              <div className="flex items-center space-x-3 text-gray-800 hover:text-[#427A43] transition-colors duration-300">
+              <div className="flex items-center space-x-3 text-gray-800 hover:text-[#007e44] transition-colors duration-300">
                 <FiMapPin className="w-5 h-5" />
                 <span>123 Card Street, Design City</span>
               </div>
@@ -103,9 +103,9 @@ const footerSections = {
         <li key={index}>
           <Link
             href={link.href}
-            className="text-gray-800 hover:text-[#427A43] transition-all duration-300 hover:pl-2 group flex items-center"
+            className="text-gray-800 hover:text-[#007e44] transition-all duration-300 hover:pl-2 group flex items-center"
           >
-            <span className="w-1 h-1 bg-[#427A43] rounded-full opacity-0 group-hover:opacity-100 mr-2 transition-all duration-300"></span>
+            <span className="w-1 h-1 bg-[#007e44] rounded-full opacity-0 group-hover:opacity-100 mr-2 transition-all duration-300"></span>
             {link.name}
           </Link>
         </li>
@@ -133,7 +133,7 @@ const footerSections = {
                 <a
                   key={social.label}
                   href={social.href}
-                  className="w-12 h-12 bg-black/10 rounded-xl flex items-center justify-center   hover:bg-[#427A43] transition-all duration-300 hover:scale-110 group"
+                  className="w-12 h-12 bg-black/10 rounded-xl flex items-center justify-center   hover:bg-[#007e44] transition-all duration-300 hover:scale-110 group"
                   aria-label={social.label}
                 >
                   <social.icon className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
@@ -159,14 +159,14 @@ const footerSections = {
 
       {/* Add CSS for golden color */}
       <style jsx global>{`
-        .text-[#427A43] {
-          color: #427A43;
+        .text-[#007e44] {
+          color: #007e44;
         }
-        .bg-[#427A43] {
-          background-color: #427A43;
+        .bg-[#007e44] {
+          background-color: #007e44;
         }
-        .border-[#427A43] {
-          border-color: #427A43;
+        .border-[#007e44] {
+          border-color: #007e44;
         }
       `}</style>
     </footer>
