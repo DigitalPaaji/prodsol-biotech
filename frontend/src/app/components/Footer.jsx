@@ -54,7 +54,7 @@ const footerSections = {
 
       <div className="border-t border-gray-600/40 h-1 my-12 mx-4 md:mx-12 xl:mx-24 2xl:mx-40 rounded-full"></div>
      
-      <div className="px-4 md:px-12 xl:px-24 2xl:px-40">
+      <div className="px-4 md:px-12 xl:px-24 2xl:px-52">
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 mb-12">
           {/* Brand Section */}

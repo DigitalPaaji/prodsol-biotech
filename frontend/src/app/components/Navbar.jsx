@@ -46,7 +46,7 @@ const Navbar = () => {
           : "bg-white/60 backdrop-blur-sm"
       } border-b border-black/5`}
     >
-      <div className=" px-4 sm:px-6 lg:px-12 xl:px-24 2xl:px-40">
+      <div className=" px-4 sm:px-6 lg:px-12 xl:px-24 2xl:px-52">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo Section */}
           <div className="shrink-0">

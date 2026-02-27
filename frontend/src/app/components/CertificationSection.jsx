@@ -12,11 +12,11 @@ export default function CertificationSection() {
   ];
 
   return (
-    <section className="py-16 px-4 md:px-8 bg-white w-full">
+    <section className="py-16 px-4 md:px-8  w-full">
       <div className="max-w-7xl mx-auto">
         
        
-        {/* <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12 items-center">
+     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12 items-center">
           
           <div className="flex flex-col items-center lg:items-center text-center px-4">
             <h2 className="text-xl md:text-2xl font-bold uppercase text-gray-900 mb-6 relative inline-block tracking-wide">
@@ -50,7 +50,7 @@ export default function CertificationSection() {
             </p>
           </div>
 
-        </div> */}
+        </div> 
 
         {/* Bottom Section: Certification Badges/Logos */}
         <div className="">
