@@ -13,6 +13,8 @@ function page() {
     <div>
       <Navbar/>
       <Banner/>
+<CertificationSection />
+
 <PackagingInnovation/>
 <ProductRange />
 <ServicesSection />
@@ -22,7 +24,6 @@ function page() {
 
 {/* <ServicesProcess/> */}
 <WhyChooseUs/>
-<CertificationSection />
 
 <Footer/>
     </div>

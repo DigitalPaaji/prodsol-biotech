@@ -19,7 +19,7 @@ export default function ProductRange() {
   ];
 
   return (
-    <section className="px-4 sm:px-6 lg:px-12 xl:px-24 2xl:px-52 py-16 text-center">
+    <section className="px-4 sm:px-6 lg:px-16 xl:px-24 2xl:px-52 py-16 text-center">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl font-medium tracking-wide text-gray-900 mb-6 relative inline-block">
           Our Product Range

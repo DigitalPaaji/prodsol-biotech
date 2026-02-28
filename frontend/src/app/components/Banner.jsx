@@ -208,12 +208,26 @@ const Banner = () => {
         {slides.map((slide, index) => (
           <div
             key={slide.id}
-            className={`w-full shrink-0 ${slide.bgColor} relative sm:px-6 lg:px-12 xl:px-24 2xl:px-40 py-24`}
+            className={`w-full shrink-0 ${slide.bgColor} relative sm:px-6 lg:px-12 xl:px-24 2xl:px-40 py-24 overflow-hidden`}
           >
-            {/* Mobile Layout (stacked) */}
-            <div className="block lg:hidden">
-              {/* Content below image */}
-              <div className="text-center px-6 py-10 md:px-12 md:py-16 relative">
+            {/* Background Image for Mobile - Only visible below lg */}
+            <div className="absolute inset-0 lg:hidden">
+              <div className="relative w-full h-full opacity-20">
+                <Image
+                  src={slide.image}
+                  alt=""
+                  fill
+                  className="object-cover"
+                  priority={index === 0}
+                  sizes="100vw"
+                  draggable="false"
+                />
+              </div>
+            </div>
+
+            {/* Mobile Layout (with background image) */}
+            <div className="block lg:hidden relative z-10">
+              <div className="text-center px-6 py-10 md:px-12 md:py-16">
                 <div className="max-w-2xl mx-auto">
                   <h1 className="font-light">
                     <span className={`head capitalize block text-5xl md:text-6xl leading-tight ${getAnimationClass('animate-fade-in-up', 'animation-delay-400')}`}>
@@ -241,25 +255,10 @@ const Banner = () => {
                     </svg>
                   </button>
                 </div>
-              </div> 
-              {/* Image first - full width, no background */}
-              <div className="w-full relative">
-                <div className={`relative w-full aspect-4/3 ${getAnimationClass('animate-zoom-in')}`}>
-                  <Image
-                    src={slide.image}
-                    alt={`${slide.company} - ${slide.title}`}
-                    width={440} 
-                    height={440}
-                    className="w-full h-auto p-4 object-cover pointer-events-none" // Added pointer-events-none
-                    priority={index === 0}
-                    sizes="100vw"
-                    draggable="false" // Added draggable false
-                  />
-                </div>
               </div>
             </div>
 
-            {/* Desktop Layout (side by side) */}
+            {/* Desktop Layout (side by side) - unchanged */}
             <div className={`hidden lg:flex items-center ${
               slide.imagePosition === 'right' 
                 ? 'flex-row' 
@@ -528,6 +527,7 @@ const Banner = () => {
 }
 
 export default Banner
+
 // 'use client'
 // import Image from 'next/image'
 // import React, { useState, useEffect, useRef } from 'react'
@@ -537,7 +537,7 @@ export default Banner
 //   const [isDragging, setIsDragging] = useState(false)
 //   const [startX, setStartX] = useState(0)
 //   const [dragOffset, setDragOffset] = useState(0)
-//   const [animate, setAnimate] = useState(false) // New state to trigger animations
+//   const [animate, setAnimate] = useState(false)
 //   const sliderRef = useRef(null)
 //   const autoPlayRef = useRef(null)
 
@@ -549,27 +549,26 @@ export default Banner
 //       subtitle: "Contract Manufacturing",
 //       tagline: "FROM CONCEPT TO COSMETIC PERFECTION",
 //       imagePosition: "right",
-//       image: "/b4.png",
+//       image: "/product1.webp",
 //       bgColor: "bg-[#EAEFEF]/60"
 //     },
 //     {
 //       id: 2,
 //       company: "PRODSOL BIOTECH PVT. LTD.",
-//       title: "Innovative Cosmetic Solutions",
+//       title: "End-to-end cosmetic solutions",
 //       subtitle: "For Modern Beauty Brands",
 //       tagline: "WHERE SCIENCE MEETS BEAUTY",
-//       imagePosition: "left",
-//       image: "/4.webp",
-//       bgColor: "bg-[#E9E3DF]/60"
-//     }
+//       imagePosition: "right",
+//       image: "/b1.png",
+//       bgColor: "bg-white/50"
+//     },
+
 //   ]
 
 //   // Trigger animations when slide changes
 //   useEffect(() => {
-//     // Reset animation state
 //     setAnimate(false)
     
-//     // Small timeout to ensure reset happens before triggering new animation
 //     const timeout = setTimeout(() => {
 //       setAnimate(true)
 //     }, 50)
@@ -598,6 +597,8 @@ export default Banner
 
 //   // Drag/Swipe handlers
 //   const handleDragStart = (e) => {
+//     // Prevent default to avoid text/image selection
+//     e.preventDefault()
 //     setIsDragging(true)
 //     setStartX(e.type === 'mousedown' ? e.pageX : e.touches[0].pageX)
 //     stopAutoPlay()
@@ -605,10 +606,24 @@ export default Banner
 
 //   const handleDragMove = (e) => {
 //     if (!isDragging) return
+//     // Prevent default to avoid scrolling while dragging
 //     e.preventDefault()
 //     const currentX = e.type === 'mousemove' ? e.pageX : e.touches[0].pageX
 //     const diff = currentX - startX
-//     setDragOffset(diff)
+    
+//     // Add resistance at edges for better UX
+//     const maxDrag = window.innerWidth * 0.5 // Limit drag to 30% of screen width
+//     let limitedDiff = diff
+    
+//     if (currentSlide === 0 && diff > 0) {
+//       limitedDiff = diff * 0.5 // Resistance when dragging first slide left
+//     } else if (currentSlide === slides.length - 1 && diff < 0) {
+//       limitedDiff = diff * 0.5 // Resistance when dragging last slide right
+//     } else {
+//       limitedDiff = Math.max(Math.min(diff, maxDrag), -maxDrag)
+//     }
+    
+//     setDragOffset(limitedDiff)
 //   }
 
 //   const handleDragEnd = () => {
@@ -616,6 +631,7 @@ export default Banner
     
 //     setIsDragging(false)
     
+//     // Only change slide if drag distance is significant
 //     if (Math.abs(dragOffset) > 100) {
 //       if (dragOffset > 0 && currentSlide > 0) {
 //         setCurrentSlide(currentSlide - 1)
@@ -652,26 +668,61 @@ export default Banner
 //     return `${baseClass} ${delay}`
 //   }
 
+//   // Calculate transform for smooth dragging
+//   const getTransformStyle = () => {
+//     const baseTransform = -currentSlide * 100
+//     const offset = isDragging ? dragOffset / window.innerWidth * 100 : 0
+//     return `translateX(calc(${baseTransform}% + ${offset}%))`
+//   }
+
 //   return (
-//     <div className="relative w-full overflow-hidden h-auto ">
+//     <div className="relative w-full overflow-hidden h-auto select-none"> {/* Added select-none */}
 //       {/* Decorative Elements */}
 //       <div className="absolute top-20 left-10 z-10 opacity-30 hidden lg:block animate-float">
-//         <Image src="/ele1.png" alt="decorative element" width={80} height={80} className="object-contain" />
+//         <Image 
+//           src="/ele1.png" 
+//           alt="decorative element" 
+//           width={80} 
+//           height={80} 
+//           className="object-contain pointer-events-none" // Added pointer-events-none
+//           draggable="false" // Added draggable false
+//         />
 //       </div>
 //       <div className="absolute bottom-20 right-10 z-10 opacity-30 hidden lg:block animate-float-delayed">
-//         <Image src="/ele2.png" alt="decorative element" width={60} height={60} className="object-contain" />
+//         <Image 
+//           src="/ele3.png" 
+//           alt="decorative element" 
+//           width={60} 
+//           height={60} 
+//           className="object-contain pointer-events-none" // Added pointer-events-none
+//           draggable="false" // Added draggable false
+//         />
 //       </div>
 //       <div className="absolute top-40 right-20 z-10 opacity-20 hidden lg:block animate-spin-slow">
-//         <Image src="/ele1.png" alt="decorative element" width={40} height={40} className="object-contain" />
+//         <Image 
+//           src="/ele2.png" 
+//           alt="decorative element" 
+//           width={40} 
+//           height={40} 
+//           className="object-contain pointer-events-none" // Added pointer-events-none
+//           draggable="false" // Added draggable false
+//         />
 //       </div>
 //       <div className="absolute bottom-40 left-20 z-10 opacity-20 hidden lg:block animate-pulse-slow">
-//         <Image src="/ele2.png" alt="decorative element" width={50} height={50} className="object-contain" />
+//         <Image 
+//           src="/ele4.png" 
+//           alt="decorative element" 
+//           width={50} 
+//           height={50} 
+//           className="object-contain pointer-events-none" // Added pointer-events-none
+//           draggable="false" // Added draggable false
+//         />
 //       </div>
 
 //       {/* Slider Container */}
 //       <div
 //         ref={sliderRef}
-//         className="relative flex items-start transition-transform duration-700 ease-out cursor-grab active:cursor-grabbing"
+//         className="relative flex items-start transition-transform duration-500 ease-out cursor-grab active:cursor-grabbing "
 //         onMouseDown={handleDragStart}
 //         onMouseMove={handleDragMove}
 //         onMouseUp={handleDragEnd}
@@ -680,13 +731,14 @@ export default Banner
 //         onTouchMove={handleDragMove}
 //         onTouchEnd={handleDragEnd}
 //         style={{
-//           transform: `translateX(calc(-${currentSlide * 100}% + ${dragOffset}px))`
+//           transform: getTransformStyle(),
+//           transition: isDragging ? 'none' : 'transform 0.5s ease-out'
 //         }}
 //       >
 //         {slides.map((slide, index) => (
 //           <div
 //             key={slide.id}
-//             className={`w-full shrink-0 ${slide.bgColor} relative`}
+//             className={`w-full shrink-0 ${slide.bgColor} relative sm:px-6 lg:px-16 xl:px-24 2xl:px-40 py-24`}
 //           >
 //             {/* Mobile Layout (stacked) */}
 //             <div className="block lg:hidden">
@@ -694,7 +746,7 @@ export default Banner
 //               <div className="text-center px-6 py-10 md:px-12 md:py-16 relative">
 //                 <div className="max-w-2xl mx-auto">
 //                   <h1 className="font-light">
-//                     <span className={`head block text-5xl md:text-6xl  leading-tight ${getAnimationClass('animate-fade-in-up', 'animation-delay-400')}`}>
+//                     <span className={`head capitalize block text-5xl md:text-6xl leading-tight ${getAnimationClass('animate-fade-in-up', 'animation-delay-400')}`}>
 //                       {slide.title}
 //                     </span>
 //                     </h1>
@@ -726,11 +778,12 @@ export default Banner
 //                   <Image
 //                     src={slide.image}
 //                     alt={`${slide.company} - ${slide.title}`}
-//                     width={1080} 
-//                     height={1440}
-//                     className="object-cover p-2"
+//                     width={440} 
+//                     height={440}
+//                     className="w-full h-auto p-4 object-cover pointer-events-none" // Added pointer-events-none
 //                     priority={index === 0}
 //                     sizes="100vw"
+//                     draggable="false" // Added draggable false
 //                   />
 //                 </div>
 //               </div>
@@ -743,7 +796,7 @@ export default Banner
 //                 : 'flex-row-reverse'
 //             }`}>
 //               {/* Content Side */}
-//               <div className={`w-1/2 px-4 text-left lg:text-center sm:px-6 lg:px-12 xl:px-24 2xl:px-40 ${slide.imagePosition === 'right' ? 'pr-12' : 'pl-12'}`}>
+//               <div className={`w-1/2 text-left lg:text-center  ${slide.imagePosition === 'right' ? 'pr-12' : 'pl-12'}`}>
 //                 <div className="space-y-4">
 //                   <h4 className={`text-xs tracking-[0.2em] text-gray-500 font-light uppercase ${getAnimationClass('animate-fade-in-up')}`}>
 //                     {slide.tagline}
@@ -754,7 +807,7 @@ export default Banner
 //                   </h2>
                   
 //                   <h1 className="font-light">
-//                     <span className={`head block text-4xl xl:text-6xl 2xl:text-8xl  leading-tight ${getAnimationClass('animate-fade-in-up', 'animation-delay-400')}`}>
+//                     <span className={`head block capitalize text-4xl xl:text-6xl 2xl:text-7xl leading-tight ${getAnimationClass('animate-fade-in-up', 'animation-delay-400')}`}>
 //                       {slide.title}
 //                     </span>
 //                     <span className={`block text-3xl xl:text-4xl text-gray-700 mt-2 font-normal `}>
@@ -779,11 +832,12 @@ export default Banner
 //                   <Image
 //                     src={slide.image}
 //                     alt={`${slide.company} - ${slide.title}`}
-//                     width={1080} 
-//                     height={1440}
-//                     className="object-cover"
+//                     width={660} 
+//                     height={660}
+//                     className="object-cover pointer-events-none" // Added pointer-events-none
 //                     priority={index === 0}
 //                     sizes="50vw"
+//                     draggable="false" // Added draggable false
 //                   />
 //                 </div>
 //               </div>
@@ -793,10 +847,24 @@ export default Banner
 //             {index === 0 && (
 //               <>
 //                 <div className="absolute top-10 left-10 z-20 opacity-20 hidden lg:block animate-pulse-slow">
-//                   <Image src="/ele1.png" alt="decorative element" width={30} height={30} />
+//                   <Image 
+//                     src="/ele5.png" 
+//                     alt="decorative element" 
+//                     width={30} 
+//                     height={30}
+//                     className="pointer-events-none" // Added pointer-events-none
+//                     draggable="false" // Added draggable false
+//                   />
 //                 </div>
 //                 <div className="absolute bottom-10 right-10 z-20 opacity-20 hidden lg:block animate-spin-slow">
-//                   <Image src="/ele2.png" alt="decorative element" width={40} height={40} />
+//                   <Image 
+//                     src="/ele2.png" 
+//                     alt="decorative element" 
+//                     width={40} 
+//                     height={40}
+//                     className="pointer-events-none" // Added pointer-events-none
+//                     draggable="false" // Added draggable false
+//                   />
 //                 </div>
 //               </>
 //             )}
@@ -804,10 +872,24 @@ export default Banner
 //             {index === 1 && (
 //               <>
 //                 <div className="absolute top-20 right-20 z-20 opacity-20 hidden lg:block animate-bounce-slow">
-//                   <Image src="/ele1.png" alt="decorative element" width={35} height={35} />
+//                   <Image 
+//                     src="/ele4.png" 
+//                     alt="decorative element" 
+//                     width={35} 
+//                     height={35}
+//                     className="pointer-events-none" // Added pointer-events-none
+//                     draggable="false" // Added draggable false
+//                   />
 //                 </div>
 //                 <div className="absolute bottom-20 left-20 z-20 opacity-20 hidden lg:animate-pulse">
-//                   <Image src="/ele2.png" alt="decorative element" width={45} height={45} />
+//                   <Image 
+//                     src="/ele2.png" 
+//                     alt="decorative element" 
+//                     width={45} 
+//                     height={45}
+//                     className="pointer-events-none" // Added pointer-events-none
+//                     draggable="false" // Added draggable false
+//                   />
 //                 </div>
 //               </>
 //             )}
@@ -815,7 +897,28 @@ export default Banner
 //         ))}
 //       </div>
 
-//       {/* Slide Indicators - repositioned for mobile */}
+//       {/* Navigation Arrows - Added for easier slide change */}
+//       <button
+//         onClick={prevSlide}
+//         className="absolute left-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors duration-300 shadow-lg"
+//         aria-label="Previous slide"
+//       >
+//         <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+//           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+//         </svg>
+//       </button>
+      
+//       <button
+//         onClick={nextSlide}
+//         className="absolute right-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors duration-300 shadow-lg"
+//         aria-label="Next slide"
+//       >
+//         <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+//           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+//         </svg>
+//       </button>
+
+//       {/* Slide Indicators */}
 //       <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-3 z-30">
 //         {slides.map((_, index) => (
 //           <button
@@ -931,6 +1034,23 @@ export default Banner
         
 //         .animation-delay-1000 {
 //           animation-delay: 1s;
+//         }
+
+//         /* Prevent text selection during drag */
+//         .select-none {
+//           -webkit-user-select: none;
+//           -moz-user-select: none;
+//           -ms-user-select: none;
+//           user-select: none;
+//         }
+
+//         /* Smooth cursor transitions */
+//         .cursor-grab {
+//           cursor: grab;
+//         }
+        
+//         .cursor-grabbing {
+//           cursor: grabbing;
 //         }
 //       `}</style>
 //     </div>

@@ -32,7 +32,7 @@ export default function WhyChooseUs() {
     <section className="py-20">
       
       {/* Heading */}
-      <div className="text-center mb-16 px-4 sm:px-6 lg:px-12 xl:px-24 2xl:px-52">
+      <div className="text-center mb-16 px-4 sm:px-6 lg:px-16 xl:px-24 2xl:px-52">
         <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#007e44] border-b border-gray-200 pb-2">
           The Prodsol Standard
         </span>
@@ -53,7 +53,7 @@ export default function WhyChooseUs() {
      
           
         {/* RIGHT FEATURES LIST */}
-        <div className="space-y-10  px-4 sm:px-6 lg:pl-12 xl:pl-24 2xl:pl-52 w-full lg:w-[50%] ">
+        <div className="space-y-10  px-4 sm:px-6 lg:pl-16 xl:pl-24 2xl:pl-52 w-full lg:w-[50%] ">
           {features.map((item, index) => (
             <div key={index} className="flex gap-5 items-start">
               

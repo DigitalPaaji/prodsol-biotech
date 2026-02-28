@@ -6,7 +6,7 @@ export default function PackagingInnovation() {
 
 
   return (
-    <section className="w-full sm:px-6 lg:px-12 xl:px-24 2xl:px-40 py-24">
+    <section className="w-full sm:px-6 lg:px-16 xl:px-24 2xl:px-40 py-24">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-12">
         <div className="order-2 lg:order-2">
           <h2
