@@ -2,25 +2,25 @@ import Image from "next/image";
 
 const features = [
   {
-    image: "/images/features/certified.png",
+    image: "/ele3.png",
     title: "Certified Quality Standards",
     description:
       "GMP, ISO, and FDA-compliant processes ensuring global safety, consistency, and product reliability.",
   },
   {
-    image: "/images/features/research.png",
+    image: "/ele4.png",
     title: "Innovative R&D & Custom Formulations",
     description:
       "Expert scientists develop unique, market-ready cosmetic formulations tailored to your brand needs.",
   },
   {
-    image: "/images/features/manufacturing.png",
+    image: "/ele1.png",
     title: "Scalable Manufacturing Solutions",
     description:
       "Flexible production with low MOQs starting from 2,000 units, supporting startups to large brands.",
   },
   {
-    image: "/images/features/support.png",
+    image: "/ele5.png",
     title: "End-to-End Product Support",
     description:
       "Complete solutions from concept, testing, regulatory assistance, to final manufacturing and delivery.",
@@ -32,7 +32,7 @@ export default function WhyChooseUs() {
     <section className="py-20">
       
       {/* Heading */}
-      <div className="text-center mb-16">
+      <div className="text-center mb-16 px-4 sm:px-6 lg:px-12 xl:px-24 2xl:px-52">
         <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#007e44] border-b border-gray-200 pb-2">
           The Prodsol Standard
         </span>
@@ -48,20 +48,12 @@ export default function WhyChooseUs() {
       </div>
 
       {/* 2 Column Layout */}
-      <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="flex justify-center gap-16 items-center flex-wrap lg:flex-nowrap">
         
-        {/* LEFT IMAGE */}
-        <div className="relative w-full h-auto">
-          <Image
-            src="/10.webp"   // ← your main big image
-            alt="Cosmetic Product"
-            fill
-            className="object-cover"
-          />
-        </div>
+     
           
         {/* RIGHT FEATURES LIST */}
-        <div className="space-y-10  pr-6 lg:pr-20 xl:pr-32">
+        <div className="space-y-10  px-4 sm:px-6 lg:pl-12 xl:pl-24 2xl:pl-52 w-full lg:w-[50%] ">
           {features.map((item, index) => (
             <div key={index} className="flex gap-5 items-start">
               
@@ -77,7 +69,7 @@ export default function WhyChooseUs() {
 
               {/* Text */}
               <div>
-                <h3 className="font-semibold text-lg mb-1">
+                <h3 className="font-medium text-lg mb-1">
                   {item.title}
                 </h3>
                 <p className="text-gray-500 text-sm leading-relaxed">
@@ -88,7 +80,16 @@ export default function WhyChooseUs() {
             </div>
           ))}
         </div>
-
+   {/* LEFT IMAGE */}
+        <div className="relative w-full lg:w-[50%] ">
+          <Image
+            src="/10.webp"   // ← your main big image
+            alt="Cosmetic Product"
+            width={1920}
+            height={1080}
+            className="object-contain"
+          />
+        </div>
       </div>
     </section>
   );

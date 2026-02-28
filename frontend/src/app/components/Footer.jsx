@@ -52,7 +52,6 @@ const footerSections = {
     <footer className=" pt-16 pb-8 ">
       {/* Main Footer Content */}
 
-      <div className="border-t border-gray-600/40 h-1 my-12 mx-4 md:mx-12 xl:mx-24 2xl:mx-40 rounded-full"></div>
      
       <div className="px-4 md:px-12 xl:px-24 2xl:px-52">
         {/* Top Section */}
@@ -60,32 +59,34 @@ const footerSections = {
           {/* Brand Section */}
           <div className="lg:col-span-5">
             <div className="shrink-0">
-            <Link
+ <Link
               href="/"
-              className="text-2xl lg:text-3xl font-bold tracking-tight group "
+              className="text-2xl text-[#007e44] lg:text-3xl font-bold tracking-tight group "
             >
-                PRODSOL BIOTECH
+               <Image width={'240'} className="w-55 h-12"        height={'40'} alt={' '} src={'/logogreen.webp' }/>
              
             </Link>
           </div>
             <p className="text-gray-800 my-6 text-md leading-relaxed">
-              Creating memorable moments through beautifully crafted greeting cards. 
-              Your perfect message, delivered with elegance and style.
+            From Concept to Cosmetic Perfection
+Your trusted partner in creating world-class cosmetics -
+built on innovation, quality, and sustainability!
             </p>
             
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-gray-800 hover:text-[#007e44] transition-colors duration-300">
                 <FiPhone className="w-5 h-5" />
-                <span>+1 (555) 123-4567</span>
+                <span>+91-9459101919</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-800 hover:text-[#007e44] transition-colors duration-300">
                 <FiMail className="w-5 h-5" />
-                <span>hello@cardcompany.com</span>
+                <span>info@prodsolbiotech.com</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-800 hover:text-[#007e44] transition-colors duration-300">
                 <FiMapPin className="w-5 h-5" />
-                <span>123 Card Street, Design City</span>
+                <span>Corporate Office / Facility, Address
+#C-163, Focal Point, Patiala, Punjab, India</span>
               </div>
             </div>
           </div>
@@ -93,7 +94,7 @@ const footerSections = {
 {/* Footer Links */}
 {Object.entries(footerSections).map(([key, section]) => (
   <div key={key} className="lg:col-span-2">
-    <h3 className=" text-xl font-semibold mb-6 relative inline-block">
+    <h3 className=" text-lg text-[#007e44] font-semibold mb-6 relative inline-block">
       {section.title}
       <span className="absolute bottom-0 left-0 w-full h-0.5  transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
     </h3>
@@ -105,7 +106,7 @@ const footerSections = {
             href={link.href}
             className="text-gray-800 hover:text-[#007e44] transition-all duration-300 hover:pl-2 group flex items-center"
           >
-            <span className="w-1 h-1 bg-[#007e44] rounded-full opacity-0 group-hover:opacity-100 mr-2 transition-all duration-300"></span>
+            <span className="w-1 h-1 bg-[#007e44]  rounded-full opacity-0 group-hover:opacity-100 mr-2 transition-all duration-300"></span>
             {link.name}
           </Link>
         </li>
@@ -133,7 +134,7 @@ const footerSections = {
                 <a
                   key={social.label}
                   href={social.href}
-                  className="w-12 h-12 bg-black/10 rounded-xl flex items-center justify-center   hover:bg-[#007e44] transition-all duration-300 hover:scale-110 group"
+                  className="w-12 h-12 bg-black/10 rounded-xl flex items-center justify-center hover:text-white  hover:bg-[#007e44] transition-all duration-300 hover:scale-110 group"
                   aria-label={social.label}
                 >
                   <social.icon className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
@@ -154,8 +155,7 @@ const footerSections = {
  
       </div>
 
-      {/* Golden accent line */}
-
+    
 
       {/* Add CSS for golden color */}
       <style jsx global>{`
