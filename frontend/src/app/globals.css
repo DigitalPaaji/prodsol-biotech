@@ -4,6 +4,16 @@
 
 
 
+.headwhite{
+    font-family: "Schibsted Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+
+  /* Outline effect */
+  color: transparent;
+  -webkit-text-stroke: 1.9px #ffffff; /* border color */
+}
 .head {
   font-family: "Schibsted Grotesk", sans-serif;
   font-optical-sizing: auto;

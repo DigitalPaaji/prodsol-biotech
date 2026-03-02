@@ -13,9 +13,9 @@ const certifications = [
 function CertificationSection() {
   return (
     <section className="py-16 border-t border-gray-100">
-      <div className="flex flex-wrap justify-center gap-8 md:gap-12 xl:gap-20 px-4 sm:px-6 lg:px-16 xl:px-24 2xl:px-52">
+      <div className="flex flex-wrap justify-center gap-8 md:gap-12 xl:gap-20 px-4 sm:px-6 md:px-16 lg:px-16 xl:px-24 2xl:px-52">
         {certifications.map((item, index) => (
-          <div key={index} className="relative w-12 h-12 md:w-20 md:h-20 lg:w-20 xl:w-24 lg:h-20 xl:h-24">
+          <div key={index} className="relative w-24 h-24 ">
             <Image src={item.src} alt={item.alt} fill className="object-contain" />
           </div>
         ))}
