@@ -31,8 +31,8 @@ export default function PhilosophySection() {
   ];
   
   return (
-    <section className="py-20 bg-linear-to-b from-white to-gray-50 overflow-hidden">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-16 xl:px-24 2xl:px-40">
+    <section className="px-4 sm:px-6 lg:px-16 xl:px-24 2xl:px-52 py-16 lg:py-24  bg-linear-to-b from-white to-gray-50 overflow-hidden">
+      <div className="container mx-auto">
         
         {/* Section Header */}
         <div className="text-center mb-16">

@@ -11,27 +11,17 @@ import ProductCategories from '../components/about/ProductCategories'
 export default function AboutPage() {
   return (
     <main className="overflow-hidden">
-      {/* Hero Banner */}
+
       <Banner />
       
-      {/* Company Intro */}
-      <CompanyIntro />
-      
-      {/* Growth & Clientele */}
+     
+      <PhilosophySection />
       <ClienteleSection />
       
-      {/* Philosophy Section */}
-      <PhilosophySection />
-      
-      {/* Capabilities Section */}
+
       <CapabilitiesSection />
       
 
-      
-      {/* Product Categories */}
-      <ProductCategories />
-      
-      {/* Vision Mission */}
       <VisionMission />
       
 

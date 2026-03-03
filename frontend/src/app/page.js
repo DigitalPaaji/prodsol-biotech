@@ -5,6 +5,7 @@ import CertificationSection from './components/CertificationSection'
 import ProductRange from './components/ProductRange'
 import WhyChooseUs from './components/Why'
 import PackagingInnovation from './components/Packing'
+import ClienteleSection from './components/about/ClienteleSection'
 
 function page() {
   return (
@@ -17,6 +18,7 @@ function page() {
 <ServicesSection />
 
 
+      <ClienteleSection />
 
 
 {/* <ServicesProcess/> */}

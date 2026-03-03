@@ -23,7 +23,7 @@ export default function ClienteleSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-16 xl:px-24 2xl:px-40">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#007e44] border-b border-gray-200 pb-2">
+          <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#007e44] pb-2">
             Our Growth & Clientele
           </span>
 
@@ -39,8 +39,8 @@ export default function ClienteleSection() {
         {/* Single Row Marquee */}
         <div className="relative">
           {/* Gradient Overlays */}
-          <div className="absolute left-0 top-0 bottom-0 w-20 z-10 bg-gradient-to-r from-gray-50 to-transparent"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-20 z-10 bg-gradient-to-l from-gray-50 to-transparent"></div>
+          <div className="absolute left-0 top-0 bottom-0 w-20 z-10 bg-linear-to-r from-gray-50 to-transparent"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-20 z-10 bg-linear-to-l from-gray-50 to-transparent"></div>
           
           {/* Marquee Container */}
           <div className="flex overflow-hidden">
@@ -53,7 +53,7 @@ export default function ClienteleSection() {
               {allClients.map((client, index) => (
                 <div
                   key={`${client.name}-${index}`}
-                  className="flex-shrink-0"
+                  className="shrink-0"
                 >
                   <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 w-[180px] h-[120px] flex items-center justify-center group hover:border-[#007e44]/20">
                     <Image

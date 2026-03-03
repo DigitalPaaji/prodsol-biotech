@@ -1,95 +1,152 @@
-const { ChevronRight } = require("lucide-react");
+"use client";
+import Image from "next/image";
+import React from "react";
 
-// Capabilities Section
-export default function CapabilitiesSection() {
+export default function CapabilitiesLayout() {
   const capabilities = [
     {
-      number: "01",
+      id: "01",
       title: "Market Understanding",
-      points: ["Pricing strategy", "Packaging insights", "Trend mapping"]
+      items: ["Pricing strategy", "Packaging insights", "Trend mapping"],
     },
     {
-      number: "02",
+      id: "02",
       title: "Research & Development",
-      points: ["500+ formulations", "Custom product development", "Innovation using actives & botanicals"]
+      items: [
+        "500+ formulations",
+        "Custom product development",
+        "Innovation using actives & botanicals",
+      ],
     },
     {
-      number: "03",
+      id: "03",
       title: "Production Excellence",
-      points: ["Automated facility", "Flexible batch sizes", "Quality checks at every stage"]
+      items: [
+        "Automated facility",
+        "Flexible batch sizes",
+        "Quality checks at every stage",
+      ],
     },
     {
-      number: "04",
+      id: "04",
       title: "Compliance & Quality",
-      points: ["In-house labs", "Dermatological testing", "International certifications"]
+      items: [
+        "In-house labs",
+        "Dermatological testing",
+        "International certifications",
+      ],
     },
     {
-      number: "05",
+      id: "05",
       title: "Logistics & Supply Chain",
-      points: ["Warehousing", "Ready-to-ship solutions", "Quick turnaround"]
-    }
+      items: ["Warehousing", "Ready-to-ship solutions", "Quick turnaround"],
+    },
   ];
-  
+
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-16 xl:px-24 2xl:px-40">
-        
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#007e44] border-b border-gray-200 pb-2">
-            Our Capabilities
+    <div className="px-4 sm:px-6 lg:px-16 xl:px-24 2xl:px-52 py-16 lg:py-24  font-sans antialiased bg-linear-to-b from-white to-gray-50 ">
+      <div className="text-center mb-16">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-light mt-4">
+          Our{" "}
+          <span className="relative italic font-medium text-[#007e44]">
+            Capabilities
           </span>
-          
-          <h2 className="text-3xl md:text-4xl font-medium mt-6">
-            End-to-End <span className="italic">Manufacturing Excellence</span>
-          </h2>
-        </div>
-        
-        {/* Capabilities Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {capabilities.map((cap, index) => (
-            <div 
-              key={index} 
-              className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 group"
-            >
-              <span className="text-5xl font-light text-[#007e44]/20 group-hover:text-[#007e44]/30 transition-colors duration-300">
-                {cap.number}
-              </span>
-              
-              <h3 className="text-xl font-medium mt-4 mb-4">{cap.title}</h3>
-              
-              <ul className="space-y-2">
-                {cap.points.map((point, idx) => (
-                  <li key={idx} className="flex items-start gap-2 text-gray-600">
-                    <ChevronRight className="w-4 h-4 text-[#007e44] mt-1 shrink-0" />
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-        
-        {/* Why Brands Choose Us */}
-        <div className="mt-16 p-8 bg-[#007e44] rounded-2xl text-white">
-          <h3 className="text-2xl font-medium mb-6">Why Brands Choose Them</h3>
-          
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-            {[
-              "Purpose-driven foundation",
-              "End-to-end services",
-              "Fast delivery timelines",
-              "Scalable manufacturing",
-              "Trusted by 50+ global brands"
-            ].map((reason, index) => (
-              <div key={index} className="flex items-center gap-2">
-                <div className="w-1.5 h-1.5 rounded-full bg-white" />
-                <span className="text-sm">{reason}</span>
+        </h2>
+
+        <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-lg">
+          Every formulation focuses on three core principles
+        </p>
+      </div>
+      {/* Main container with two-column layout */}
+      <div className="flex flex-col xl:flex-row">
+        {/* LEFT SIDEBAR - inspired by the beige/visual panel from the image */}
+        <div className="xl:w-1/2 bg-[#fbf7f2] p-10 xl:p-14 flex flex-col justify-between relative overflow-hidden">
+          {/* subtle decorative element (like the abstract lines from the image) */}
+          <div className="absolute top-0 right-0 w-48 h-48 bg-[#e6d9d0] rounded-full -mr-10 -mt-10 opacity-30"></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#d8cdc2] rounded-full -mb-20 -ml-20 opacity-20"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-14">
+            {capabilities.map((cap) => (
+              <div key={cap.id} className="group">
+                {/* title */}
+                <h3 className="text-xl font-semibold text-gray-800 mt-2 mb-4">
+                  {cap.title}
+                </h3>
+                {/* bullet list */}
+                <ul className="space-y-1 text-gray-600">
+                  {cap.items.map((item, idx) => (
+                    <li key={idx} className="flex items-start">
+                      <span className="mr-2 text-gray-400">—</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
         </div>
+
+{/* RIGHT CONTENT - capabilities cards */}
+<div className="xl:w-1/2 px-4">
+  <div className="relative z-10 space-y-4">
+    {/* Main large image with slight rotation/overlap effect */}
+    <div className="relative">
+      <Image
+        src="/about2.webp" // Add main image
+        alt="Main beauty product"
+        width={800}
+        height={600}
+        className="w-full hidden xl:block h-85 object-cover rounded-tl-4xl rounded-br-4xl "
+        priority
+      />
+      
+
+    </div>
+
+    {/* Two smaller images arranged with overlap/offset effect */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-end ">
+      <div className="w-full ">
+        <div className="relative">
+          <Image
+            src="/about3.webp" // Add first small image
+            alt="Beauty product detail 1"
+            width={400}
+            height={300}
+            className="w-full h-auto object-cover rounded-tl-4xl rounded-br-4xl"
+          />
+        </div>
       </div>
-    </section>
+      <div className="w-full  ">
+        <div className="relative">
+          <Image
+            src="/s7.webp" // Add second small image
+            alt="Beauty product detail 2"
+            width={400}
+            height={300}
+            className="w-full h-auto object-cover rounded-tl-4xl rounded-br-4xl"
+          />
+        </div>
+      </div>
+    </div>
+
+    {/* Caption text similar to the "cosmetic mockup" style */}
+    <div className="mt-8 text-right">
+      <span className="text-xs text-gray-500 uppercase tracking-[0.3em]">
+        beauty <span className="text-gray-300 mx-2">/</span> essentials
+      </span>
+    </div>
+  </div>
+</div>
+      </div>
+
+      {/* style tweak for better spacing on small screens */}
+      <style jsx>{`
+        @media (max-width: 1024px) {
+          .lg\\:w-2\/5,
+          .lg\\:w-3\/5 {
+            width: 100%;
+          }
+        }
+      `}</style>
+    </div>
   );
 }

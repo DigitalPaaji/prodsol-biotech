@@ -30,7 +30,7 @@ export default function ProductCategories() {
   
   return (
     <section className="py-20 bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-16 xl:px-24 2xl:px-40">
+      <div className="px-4 sm:px-6 lg:px-16 xl:px-24 2xl:px-40">
         
         {/* Section Header */}
         <div className="text-center mb-16">
