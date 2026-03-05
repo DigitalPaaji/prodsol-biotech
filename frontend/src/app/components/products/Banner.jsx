@@ -10,7 +10,7 @@ export default function HeroBanner() {
       <div className="relative w-full">
     {/* Mobile / Tablet Image */}
 <Image
-  src="/about.webp"
+  src="/product.webp"
   alt="About Us Background"
   width={1920}
   height={600}
@@ -21,7 +21,7 @@ export default function HeroBanner() {
 
 {/* Desktop Image */}
 <Image
-  src="/about0.webp"
+  src="/product2.webp"
   alt="About Us Background"
   width={1920}
   height={600}
@@ -31,7 +31,7 @@ export default function HeroBanner() {
 />
         
         {/* Dark Overlay - Optional, remove if not needed */}
-        <div className="absolute inset-0 bg-linear-to-br from-transparent via-[#007e43]/10 to-[#007e43]/30" />
+        <div className="absolute inset-0 bg-linear-to-br from-transparent via-[#5024005b] to-[#007e4386]" />
         
         {/* Content Container - Positioned absolutely over the image */}
         <div className="absolute inset-0 flex items-center">
