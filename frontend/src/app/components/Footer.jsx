@@ -5,39 +5,20 @@ import { useState } from 'react';
 import { FiFacebook, FiTwitter, FiInstagram, FiYoutube, FiMail, FiPhone, FiMapPin } from 'react-icons/fi';
 
 const Footer = () => {
-  const [email, setEmail] = useState('');
-
-  const handleSubscribe = (e) => {
-    e.preventDefault();
-    // Handle subscription logic here
-    console.log('Subscribed with email:', email);
-    setEmail('');
-    // Add your subscription API call here
-  };
 
 const footerSections = {
   shop: {
-    title: 'Shop Cards',
+    title: 'Quick Links',
     links: [
       { name: 'Home', href: '/' },
-      { name: 'Credit / Debit Cards', href: '/credit-debit-cards' },
-      { name: 'Business Metal Cards', href: '/business-metal-cards' },
-      { name: 'Tap 2 Pay Cards', href: '/tap-2-pay-cards' },
-      { name: 'Card Holders', href: '/card-holders' },
+      { name: 'Product Categories', href: '/products' },
+      { name: 'The Process', href: '/process' },
+      { name: 'About Us', href: '/about' },
+      { name: 'Contact Us', href: '/contact' },
     ]
   },
 
-  support: {
-    title: 'Support',
-    links: [
-      { name: 'Contact Us', href: '/contact' },
-      { name: 'Terms & Conditions', href: '/terms-and-conditions' },
-      { name: 'Refund Policy', href: '/refund-policy' },
-      { name: 'About Us', href: '/about' },
-      { name: 'FAQ', href: '/faq' },
-      { name: 'Privacy Policy', href: '/privacy-policy' },
-    ]
-  }
+
 };
 
 
@@ -63,7 +44,7 @@ const footerSections = {
               href="/"
               className="text-2xl text-[#007e44] lg:text-3xl font-bold tracking-tight group "
             >
-               <Image width={'240'} className="w-55 h-12"        height={'40'} alt={' '} src={'/logogreen.webp' }/>
+               <Image width={'240'} className="w-60  h-14"        height={'40'} alt={' '} src={'/logogreen.png' }/>
              
             </Link>
           </div>
@@ -77,24 +58,34 @@ built on innovation, quality, and sustainability!
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-gray-800 hover:text-[#007e44] transition-colors duration-300">
                 <FiPhone className="w-5 h-5" />
-                <span>+91-9459101919</span>
+                <span>+91 94591-01919</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-800 hover:text-[#007e44] transition-colors duration-300">
                 <FiMail className="w-5 h-5" />
-                <span>info@prodsolbiotech.com</span>
+                <span>info@prodsolbiotech.com,
+support@prodsolbiotech.com</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-800 hover:text-[#007e44] transition-colors duration-300">
                 <FiMapPin className="w-5 h-5" />
-                <span>Corporate Office / Facility, Address
-#C-163, Focal Point, Patiala, Punjab, India</span>
+                <span>
+C-163, Focal Point,
+Patiala, Punjab - 147001
+</span>
+              </div>
+                            <div className="flex items-center space-x-3 text-gray-800 hover:text-[#007e44] transition-colors duration-300">
+                <FiMapPin className="w-5 h-5" />
+                <span>
+#111, Street No. 8, Aman Vihar,
+Patiala, Punjab
+</span>
               </div>
             </div>
           </div>
 
 {/* Footer Links */}
 {Object.entries(footerSections).map(([key, section]) => (
-  <div key={key} className="lg:col-span-2">
-    <h3 className=" text-lg text-[#007e44] font-semibold mb-6 relative inline-block">
+  <div key={key} className="lg:col-span-3">
+    <h3 className=" text-lg text-[#007e44] font-semibold my-4 relative inline-block">
       {section.title}
       <span className="absolute bottom-0 left-0 w-full h-0.5  transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
     </h3>
@@ -116,7 +107,7 @@ built on innovation, quality, and sustainability!
 ))}
 
 
-                 <div className="lg:col-span-3">
+                 <div className="lg:col-span-4">
         <div className="">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3442.726002954475!2d76.4027356!3d30.358736000000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3910291ec53226d3%3A0xd81cade77ecfa8d3!2sDigital%20Paaji!5e0!3m2!1sen!2sin!4v1735063353416!5m2!1sen!2sin"
@@ -150,7 +141,7 @@ built on innovation, quality, and sustainability!
      
             {/* Copyright */}
             <div className="text-gray-400 text-center pt-8">
-              <p>&copy; {new Date().getFullYear()} Card Company. All rights reserved.</p>
+              <p>&copy; {new Date().getFullYear()} Prodsol Biotech Pvt. Ltd.. All rights reserved.</p>
             </div>
  
       </div>

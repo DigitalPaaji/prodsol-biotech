@@ -208,7 +208,7 @@ export default function ProductRange() {
           onMouseEnter={() => setHoveredIndex(6)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
-          <Image fill src="/p2.webp" alt="Hygiene" className="absolute inset-0 w-full h-full object-cover mix-blend-multiply " />
+          <Image fill src="/p4.webp" alt="Hygiene" className="absolute inset-0 w-full h-full object-cover mix-blend-multiply " />
           <div className="relative z-10 w-full">
  
             {/* Expandable Item List on Hover */}
@@ -264,7 +264,7 @@ export default function ProductRange() {
           onMouseEnter={() => setHoveredIndex(2)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
-          <Image fill src="/p4.webp" alt="Hygiene" className="absolute inset-0 w-full h-full object-cover mix-blend-multiply " />
+          <Image fill src="/p2.webp" alt="Hygiene" className="absolute inset-0 w-full h-full object-cover mix-blend-multiply " />
           <div className="relative z-10 w-full">
        
             {/* Expandable Item List on Hover */}

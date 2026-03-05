@@ -12,7 +12,7 @@ const certifications = [
 
 function CertificationSection() {
   return (
-    <section className="py-16 border-t border-gray-100">
+    <section className="py-16 ">
       <div className="flex flex-wrap justify-center gap-8 md:gap-12 xl:gap-20 px-4 sm:px-6 md:px-16 lg:px-16 xl:px-24 2xl:px-52">
         {certifications.map((item, index) => (
           <div key={index} className="relative w-24 h-24 ">

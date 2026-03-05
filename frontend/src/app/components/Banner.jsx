@@ -208,17 +208,17 @@ const Banner = () => {
         {slides.map((slide, index) => (
           <div
             key={slide.id}
-            className={`w-full shrink-0 ${slide.bgColor} relative sm:px-6 lg:px-16 xl:px-24 2xl:px-40  lg:py-24`}
+            className={`w-full shrink-0 ${slide.bgColor} relative px-6 lg:px-16 xl:px-24 2xl:px-40  lg:py-24`}
           >
             {/* Mobile Layout (stacked) */}
             <div className="block lg:hidden">
               {/* Content below image */}
               <div className="text-center px-6 py-10 md:px-12 md:py-16 relative">
                 <div className="max-w-2xl mx-auto">
-                  <h1 className="font-light">
-                    <span className={`head capitalize block text-5xl md:text-6xl leading-tight ${getAnimationClass('animate-fade-in-up', 'animation-delay-400')}`}>
+                  <h1 
+                     className={`head capitalize block text-4xl md:text-6xl leading-tight ${getAnimationClass('animate-fade-in-up', 'animation-delay-400')}`}>
                       {slide.title}
-                    </span>
+              
                     </h1>
                     <h4 className={`text-sm tracking-[0.2em] text-gray-500 font-light uppercase my-2 ${getAnimationClass('animate-fade-in-up')}`}>
                       {slide.tagline}
@@ -276,14 +276,14 @@ const Banner = () => {
                     {slide.company}
                   </h2>
                   
-                  <h1 className="font-light">
-                    <span className={`head block capitalize text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl leading-tight ${getAnimationClass('animate-fade-in-up', 'animation-delay-400')}`}>
+                  <h1  className={`head block capitalize text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl leading-tight ${getAnimationClass('animate-fade-in-up', 'animation-delay-400')}`}>
                       {slide.title}
-                    </span>
-                    <span className={`block text-xl lg:text-2xl xl:text-4xl text-gray-700 mt-2 font-normal `}>
+                
+                 
+                  </h1>
+                     <span className={`block text-xl lg:text-2xl xl:text-4xl text-gray-700 mt-2 font-normal `}>
                       {slide.subtitle}
                     </span>
-                  </h1>
 
                   <div className={`w-16 h-px bg-gray-300 my-6 ${getAnimationClass('animate-scale-x', 'animation-delay-800')}`}></div>
 
@@ -380,7 +380,7 @@ const Banner = () => {
       
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors duration-300 shadow-lg"
+        className="hidden lg:absolute right-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 bg-white/80 rounded-full lg:flex items-center justify-center hover:bg-white transition-colors duration-300 shadow-lg"
         aria-label="Next slide"
       >
         <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -389,7 +389,7 @@ const Banner = () => {
       </button>
 
       {/* Slide Indicators */}
-      <div className="hidden lg:absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 lg:flex items-center gap-3 z-30">
+      <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 lg:flex items-center gap-3 z-30">
         {slides.map((_, index) => (
           <button
             key={index}

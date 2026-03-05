@@ -53,7 +53,7 @@ const Navbar = () => {
               href="/"
               className="text-2xl text-[#007e44] lg:text-3xl font-bold tracking-tight group "
             >
-               <Image width={'240'} className="w-full h-10" height={'40'} alt={' '} src={'/logogreen.webp' }/>
+               <Image width={'240'} className="w-full h-10" height={'40'} alt={' '} src={'/logogreen.png' }/>
              
             </Link>
           </div>
