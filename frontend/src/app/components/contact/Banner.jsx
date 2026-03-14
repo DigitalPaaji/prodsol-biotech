@@ -8,7 +8,9 @@ export default function HeroBanner() {
     <div className="relative w-full">
       {/* Background Image Container - Height controlled by image aspect ratio */}
       <div className="relative w-full">
-    {/* Mobile / Tablet Image */}
+    {/* 
+    
+    */}
 <Image
   src="/about.webp"
   alt="About Us Background"
