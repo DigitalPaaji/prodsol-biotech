@@ -15,7 +15,7 @@ export default function Intro() {
   
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center  px-4 sm:px-6 lg:px-16 xl:px-24 2xl:px-52 py-16 lg:py-24">
           
-          {/* Left Content */}
+          
           <div>
             <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#007e44] border-b border-gray-200 pb-2">
               Our Story
@@ -59,11 +59,11 @@ export default function Intro() {
             </p>
           </div>
           
-          {/* Right Image */}
+          
           <div className="relative">
             <div className="relative overflow-hidden">
               <Image
-                src="/p4.webp" // Add founder image
+                src="/p4.webp"
                 alt=" "
                 width={600}
                 height={700}
@@ -75,7 +75,7 @@ export default function Intro() {
               </div>
             </div>
             
-            {/* Decorative Element */}
+            
             <div className="absolute -top-4 -right-4 w-24 h-24 bg-[#007e44]/10 rounded-full -z-10" />
             <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-[#007e44]/10 rounded-full -z-10" />
           </div>

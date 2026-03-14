@@ -7,6 +7,7 @@ import PhilosophySection from '../components/about/PhilosophySection'
 import CapabilitiesSection from '../components/about/CapabilitiesSection'
 import VisionMission from '../components/about/VisionMission'
 import ProductCategories from '../components/about/ProductCategories'
+import About from "../components/about/About";
 
 export default function AboutPage() {
   return (
@@ -14,7 +15,7 @@ export default function AboutPage() {
 
       <Banner />
       
-     
+     <About />
       <PhilosophySection />
       <ClienteleSection />
       

@@ -90,7 +90,7 @@ const ContactPage = () => {
           solutions. Reach out to us through any of the channels below.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Office Address */}
           <div className="flex flex-col items-center">
             <div className="w-20 h-24 bg-[#007e43cc] rounded-t-full flex items-center justify-center mb-6">
@@ -106,12 +106,12 @@ const ContactPage = () => {
             <p className=" text-gray-500 leading-relaxed">
               C-163, Focal Point,
               <br />
-              Patiala, Punjab – 147001
+              Patiala, Punjab - 147001
             </p>
           </div>
 
           {/* Registered Office */}
-          <div className="flex flex-col items-center">
+          {/* <div className="flex flex-col items-center">
             <div className="w-20 h-24 border border-gray-200 rounded-t-full flex items-center justify-center mb-6">
               <Image
                 src="/ele7.png" // Update with your image path
@@ -128,7 +128,7 @@ const ContactPage = () => {
               <br />
               Patiala, Punjab
             </p>
-          </div>
+          </div> */}
 
           {/* Contact Number */}
           <div className="flex flex-col items-center">
@@ -173,8 +173,8 @@ const ContactPage = () => {
         {/* Map Placeholder */}
         <div className="w-full lg:w-1/2 h-112.5 bg-gray-200">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3442.853384260596!2d76.4259!3d30.3421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDIwJzMxLjYiTiA3Nis0NSczMy4yIkU!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-            className="w-full h-full grayscale opacity-80"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4271.373247928821!2d76.42175519999999!3d30.373736199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39102708e4b05f43%3A0x5cac00a43cd7b8f5!2sProdsol%20Biotech%20Pvt%20Ltd!5e1!3m2!1sen!2sin!4v1773475102579!5m2!1sen!2sin"
+            className="w-full h-full  opacity-80"
             style={{ border: 0 }}
             allowFullScreen=""
             loading="lazy"

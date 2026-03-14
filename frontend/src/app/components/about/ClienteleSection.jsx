@@ -2,26 +2,24 @@
 
 import Image from "next/image";
 
-// Clientele Section
+
 export default function ClienteleSection() {
   const clients = [
     { name: "The Mad House", logo: "/logo/madhouse.webp" },
     { name: "Born16", logo: "/logo/born16.webp" },
     { name: "Nourish Mantra", logo: "/logo/nourish.webp" },
     { name: "Neemli Naturals", logo: "/logo/neemli.webp" },
-    { name: "Secret Alchemist", logo: "/logo/secretalchemist.webp" },
+    { name: "Secret Alchemist", logo: "/logo/wildwolf.webp" },
     { name: "Ayuvya", logo: "/logo/ayuvya.webp" },
     { name: "Softbird", logo: "/logo/softbird.png" },
     { name: "Ellement Co", logo: "/logo/ellementco.webp" },
   ];
-
-  // Duplicate clients for seamless infinite scroll
   const allClients = [...clients, ...clients, ...clients];
 
   return (
     <section className="py-20 bg-gray-50 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-16 xl:px-24 2xl:px-40">
-        {/* Header */}
+        
         <div className="text-center mb-16">
           <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#007e44] pb-2">
             Our Growth & Clientele
@@ -36,13 +34,13 @@ export default function ClienteleSection() {
           </p>
         </div>
 
-        {/* Single Row Marquee */}
+        
         <div className="relative">
-          {/* Gradient Overlays */}
+          
           <div className="absolute left-0 top-0 bottom-0 w-20 z-10 bg-linear-to-r from-gray-50 to-transparent"></div>
           <div className="absolute right-0 top-0 bottom-0 w-20 z-10 bg-linear-to-l from-gray-50 to-transparent"></div>
           
-          {/* Marquee Container */}
+          
           <div className="flex overflow-hidden">
             <div 
               className="flex whitespace-nowrap gap-6"
@@ -71,7 +69,7 @@ export default function ClienteleSection() {
         </div>
       </div>
 
-      {/* Add animation styles */}
+    
       <style jsx>{`
         @keyframes marquee {
           0% {

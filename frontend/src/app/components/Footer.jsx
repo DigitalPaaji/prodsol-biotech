@@ -72,13 +72,13 @@ C-163, Focal Point,
 Patiala, Punjab - 147001
 </span>
               </div>
-                            <div className="flex items-center space-x-3 text-gray-800 hover:text-[#007e44] transition-colors duration-300">
+                            {/* <div className="flex items-center space-x-3 text-gray-800 hover:text-[#007e44] transition-colors duration-300">
                 <FiMapPin className="w-5 h-5" />
                 <span>
 #111, Street No. 8, Aman Vihar,
 Patiala, Punjab
 </span>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -110,7 +110,8 @@ Patiala, Punjab
                  <div className="lg:col-span-4">
         <div className="">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3442.726002954475!2d76.4027356!3d30.358736000000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3910291ec53226d3%3A0xd81cade77ecfa8d3!2sDigital%20Paaji!5e0!3m2!1sen!2sin!4v1735063353416!5m2!1sen!2sin"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4271.373247928821!2d76.42175519999999!3d30.373736199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39102708e4b05f43%3A0x5cac00a43cd7b8f5!2sProdsol%20Biotech%20Pvt%20Ltd!5e1!3m2!1sen!2sin!4v1773475102579!5m2!1sen!2sin"
+
             width="600"
             height="450"
             allowFullScreen=""
@@ -119,6 +120,8 @@ Patiala, Punjab
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
+
+
                 {/* Social Links */}
             <div className="flex space-x-4 mt-8">
               {socialLinks.map((social) => (

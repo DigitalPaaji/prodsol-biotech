@@ -2,23 +2,20 @@ import Image from "next/image";
 
 // Vision Mission Component - Refined Version
 export default function VisionMission() {
-  const missionPoints = [
-    {
-      number: "01",
-      title: "Empower Entrepreneurs",
-      description: "Provide unwavering support to transform innovative ideas into successful ventures."
-    },
-    {
-      number: "02",
-      title: "Foster Innovation",
-      description: "Cultivate a collaborative environment where creativity and strategic planning converge."
-    },
-    {
-      number: "03",
-      title: "Drive Sustainable Growth",
-      description: "Equip businesses with the tools and knowledge for long-term success and adaptability in a dynamic market."
-    }
-  ];
+const missionPoints = [
+  {
+    number: "01",
+    title: "Our Vision",
+    description:
+      "To become the most trusted and innovative partner for personal care brands worldwide, by creating sustainable, effective, and ethical products that deliver real results."
+  },
+  {
+    number: "02",
+    title: "Our Mission",
+    description:
+      "To empower brands with end-to-end cosmetic manufacturing solutions that embody sustainability, transparency, and uncompromising quality, ensuring every product carries the promise of From Concept to Cosmetic Perfection."
+  }
+];
 
   return (
     <section className=" ">
@@ -36,13 +33,13 @@ export default function VisionMission() {
           <h2 className="text-3xl md:text-4xl font-medium mb-4">
             Mission and Vision
           </h2>
-          <p className="text-lg text-gray-500 italic font-light border-l-4 border-gray-300 pl-6">
-            We&apos;ll make this happen.
+          <p className="text-lg capitalize text-gray-500 italic font-light border-l-4 border-gray-300 pl-6">
+         From concept to cosmetic perfection
           </p>
         </div>
         
         {/* Mission grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8  lg:gap-28">
           {missionPoints.map((point, index) => (
             <div 
               key={index}

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Leaf, Shield, Users } from "lucide-react";
 
-// Philosophy Section
+
 export default function PhilosophySection() {
   const philosophyPoints = [
     {
@@ -14,7 +14,7 @@ export default function PhilosophySection() {
     },
     {
       icon: Shield,
-      image: "/premium.png", // Using same image for now
+      image: "/premium.png", 
       title: "Quality & R&D",
       description: "Stability testing, Microbiological analysis, ISO, GMP, FDA compliance",
       color: "text-blue-600",
@@ -22,7 +22,7 @@ export default function PhilosophySection() {
     },
     {
       icon: Users,
-      image: "/ele6.png", // Using same image for now
+      image: "/ele6.png", 
       title: "Transparency",
       description: "Open communication on sourcing, pricing, and processes. No hidden costs.",
       color: "text-purple-600",
@@ -33,8 +33,6 @@ export default function PhilosophySection() {
   return (
     <section className="px-4 sm:px-6 lg:px-16 xl:px-24 2xl:px-52 py-16 lg:py-24  bg-linear-to-b from-white to-gray-50 overflow-hidden">
       <div className="container mx-auto">
-        
-        {/* Section Header */}
         <div className="text-center mb-16">
           <span className="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-[#007e44] px-4 py-2 mb-4">
             Our Philosophy
@@ -49,7 +47,6 @@ export default function PhilosophySection() {
           </p>
         </div>
         
-        {/* Philosophy Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {philosophyPoints.map((point, index) => {
             const Icon = point.icon;
