@@ -39,21 +39,21 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`w-full transition-all duration-300 ${
+      className={`w-full transition-all duration-300 py-2 ${
         scrolled
           ? "bg-white/80 backdrop-blur-md shadow-lg"
           : "bg-white/60 backdrop-blur-sm"
       } border-b border-black/5`}
     >
       <div className=" px-4 sm:px-6 lg:px-16 xl:px-24 2xl:px-52">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="flex items-center justify-between ">
           {/* Logo Section */}
           <div className="shrink-0">
             <Link
               href="/"
               className="text-2xl text-[#007e44] lg:text-3xl font-bold tracking-tight group "
             >
-               <Image width={'240'} className="w-full h-10" height={'40'} alt={' '} src={'/logogreen.png' }/>
+               <Image width={'1080'} className="w-full h-[70px] lg:h-[80px]  nobject-cover" height={'80'} alt={' '} src={'/logo2.png' }/>
              
             </Link>
           </div>

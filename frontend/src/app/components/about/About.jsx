@@ -43,10 +43,10 @@ export default function About() {
             idea to shelf under one roof.
           </p>
 
-          <button className="group flex items-center gap-2 text-[#2F7E44] font-medium hover:text-[#1f5a30] transition-colors">
+          {/* <button className="group flex items-center gap-2 text-[#2F7E44] font-medium hover:text-[#1f5a30] transition-colors">
             <span>Read More</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </button>
+          </button> */}
         </div>
 
         {/* Right Column - Image */}

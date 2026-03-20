@@ -20,7 +20,7 @@ const SuccessPopup = ({ message, onClose }) => (
         <p className="text-gray-600 mb-6">{message}</p>
         <button
           onClick={onClose}
-          className="px-8 py-3 bg-[#007e43] text-white font-semibold  transform hover:scale-105 transition duration-200"
+          className="px-8 py-3 bg-[#005D4F] text-white font-semibold  transform hover:scale-105 transition duration-200"
         >
           Close
         </button>
@@ -61,7 +61,7 @@ const ContactPage = () => {
           },
           body: JSON.stringify({
             formdata: formData,
-            sendto: ["info@prodsolbiotech.com","support@prodsolbiotech.com"],
+            sendto: ["info@prodsolbiotech.com"],
             subject: "Website Query",
           }),
         },
@@ -93,7 +93,7 @@ const ContactPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Office Address */}
           <div className="flex flex-col items-center">
-            <div className="w-20 h-24 bg-[#007e43cc] rounded-t-full flex items-center justify-center mb-6">
+            <div className="w-20 h-24 bg-[#005D4Fcc] rounded-t-full flex items-center justify-center mb-6">
               <Image
                 src="/office.png" // Update with your image path
                 alt="Office"
@@ -197,7 +197,7 @@ const ContactPage = () => {
               value={formData.Name}
               onChange={(e) => handelInput(e)}
               placeholder="Your Name"
-              className="border-b border-gray-300 py-2 focus:outline-none focus:border-[#007e43] transition-colors text-sm"
+              className="border-b border-gray-300 py-2 focus:outline-none focus:border-[#005D4F] transition-colors text-sm"
             />
             <input
               type="email"
@@ -206,7 +206,7 @@ const ContactPage = () => {
               value={formData.Email}
               onChange={(e) => handelInput(e)}
               placeholder="Your Email"
-              className="border-b border-gray-300 py-2 focus:outline-none focus:border-[#007e43] transition-colors text-sm"
+              className="border-b border-gray-300 py-2 focus:outline-none focus:border-[#005D4F] transition-colors text-sm"
             />
             <input
               type="text"
@@ -215,7 +215,7 @@ const ContactPage = () => {
               value={formData.Phone}
               onChange={(e) => handelInput(e)}
               placeholder="Your Phone"
-              className="border-b border-gray-300 py-2 focus:outline-none focus:border-[#007e43] transition-colors text-sm"
+              className="border-b border-gray-300 py-2 focus:outline-none focus:border-[#005D4F] transition-colors text-sm"
             />
             <input
               type="text"
@@ -224,7 +224,7 @@ const ContactPage = () => {
               value={formData.Subject}
               onChange={(e) => handelInput(e)}
               placeholder="Subject"
-              className="border-b border-gray-300 py-2 focus:outline-none focus:border-[#007e43] transition-colors text-sm"
+              className="border-b border-gray-300 py-2 focus:outline-none focus:border-[#005D4F] transition-colors text-sm"
             />
             <div className="md:col-span-2 mt-4">
               <textarea
@@ -234,14 +234,14 @@ const ContactPage = () => {
                 value={formData.Message}
                 onChange={(e) => handelInput(e)}
                 rows="4"
-                className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-[#007e43] transition-colors text-sm"
+                className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-[#005D4F] transition-colors text-sm"
               ></textarea>
             </div>
             <div className="md:col-span-2 mt-8">
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="bg-[#007e43] text-white px-10 py-3  rounded-sm  font-bold tracking-widest uppercase hover:bg-green-600 transition-all shadow-sm"
+                className="bg-[#005D4F] text-white px-10 py-3  rounded-sm  font-bold tracking-widest uppercase hover:bg-green-600 transition-all shadow-sm"
               >
                 {isSubmitting ? "Submitting..." : "Send Message"}
               </button>

@@ -31,7 +31,7 @@ export default function HeroBanner() {
 />
         
         {/* Dark Overlay - Optional, remove if not needed */}
-        <div className="absolute inset-0 bg-linear-to-br from-transparent via-[#007e43]/10 to-[#007e43]/30" />
+        <div className="absolute inset-0 bg-linear-to-br from-transparent via-[#005D4F]/10 to-[#005D4F]/30" />
         
         {/* Content Container - Positioned absolutely over the image */}
         <div className="absolute inset-0 flex items-center">

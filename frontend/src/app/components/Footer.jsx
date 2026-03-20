@@ -42,9 +42,9 @@ const footerSections = {
             <div className="shrink-0">
  <Link
               href="/"
-              className="text-2xl text-[#007e44] lg:text-3xl font-bold tracking-tight group "
+              className="text-2xl text-[#005D4F] lg:text-3xl font-bold tracking-tight group "
             >
-               <Image width={'240'} className="w-60  h-14"        height={'40'} alt={' '} src={'/logogreen.png' }/>
+               <Image width={'240'} className="w-fit  h-[80px]"        height={'80'} alt={' '} src={'/logo2.png' }/>
              
             </Link>
           </div>
@@ -56,23 +56,23 @@ built on innovation, quality, and sustainability!
             
             {/* Contact Info */}
             <div className="space-y-3">
-              <div className="flex items-center space-x-3 text-gray-800 hover:text-[#007e44] transition-colors duration-300">
+              <div className="flex items-center space-x-3 text-gray-800 hover:text-[#005D4F] transition-colors duration-300">
                 <FiPhone className="w-5 h-5" />
                 <span>+91 94591-01919</span>
               </div>
-              <div className="flex items-center space-x-3 text-gray-800 hover:text-[#007e44] transition-colors duration-300">
+              <div className="flex items-center space-x-3 text-gray-800 hover:text-[#005D4F] transition-colors duration-300">
                 <FiMail className="w-5 h-5" />
-                <span>info@prodsolbiotech.com,
-support@prodsolbiotech.com</span>
+                <span>info@prodsolbiotech.com
+</span>
               </div>
-              <div className="flex items-center space-x-3 text-gray-800 hover:text-[#007e44] transition-colors duration-300">
+              <div className="flex items-center space-x-3 text-gray-800 hover:text-[#005D4F] transition-colors duration-300">
                 <FiMapPin className="w-5 h-5" />
                 <span>
 C-163, Focal Point,
 Patiala, Punjab - 147001
 </span>
               </div>
-                            {/* <div className="flex items-center space-x-3 text-gray-800 hover:text-[#007e44] transition-colors duration-300">
+                            {/* <div className="flex items-center space-x-3 text-gray-800 hover:text-[#005D4F] transition-colors duration-300">
                 <FiMapPin className="w-5 h-5" />
                 <span>
 #111, Street No. 8, Aman Vihar,
@@ -85,7 +85,7 @@ Patiala, Punjab
 {/* Footer Links */}
 {Object.entries(footerSections).map(([key, section]) => (
   <div key={key} className="lg:col-span-3">
-    <h3 className=" text-lg text-[#007e44] font-semibold my-4 relative inline-block">
+    <h3 className=" text-lg text-[#005D4F] font-semibold my-4 relative inline-block">
       {section.title}
       <span className="absolute bottom-0 left-0 w-full h-0.5  transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
     </h3>
@@ -95,9 +95,9 @@ Patiala, Punjab
         <li key={index}>
           <Link
             href={link.href}
-            className="text-gray-800 hover:text-[#007e44] transition-all duration-300 hover:pl-2 group flex items-center"
+            className="text-gray-800 hover:text-[#005D4F] transition-all duration-300 hover:pl-2 group flex items-center"
           >
-            <span className="w-1 h-1 bg-[#007e44]  rounded-full opacity-0 group-hover:opacity-100 mr-2 transition-all duration-300"></span>
+            <span className="w-1 h-1 bg-[#005D4F]  rounded-full opacity-0 group-hover:opacity-100 mr-2 transition-all duration-300"></span>
             {link.name}
           </Link>
         </li>
@@ -127,7 +127,7 @@ Patiala, Punjab
                 <a
                   key={social.label}
                   href={social.href}
-                  className="w-12 h-12 bg-black/10 rounded-xl flex items-center justify-center hover:text-white  hover:bg-[#007e44] transition-all duration-300 hover:scale-110 group"
+                  className="w-12 h-12 bg-black/10 rounded-xl flex items-center justify-center hover:text-white  hover:bg-[#005D4F] transition-all duration-300 hover:scale-110 group"
                   aria-label={social.label}
                 >
                   <social.icon className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
@@ -152,14 +152,14 @@ Patiala, Punjab
 
       {/* Add CSS for golden color */}
       <style jsx global>{`
-        .text-[#007e44] {
-          color: #007e44;
+        .text-[#005D4F] {
+          color: #005D4F;
         }
-        .bg-[#007e44] {
-          background-color: #007e44;
+        .bg-[#005D4F] {
+          background-color: #005D4F;
         }
-        .border-[#007e44] {
-          border-color: #007e44;
+        .border-[#005D4F] {
+          border-color: #005D4F;
         }
       `}</style>
     </footer>
