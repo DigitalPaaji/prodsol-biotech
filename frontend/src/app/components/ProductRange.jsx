@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 
 export default function ProductRange() {
@@ -34,8 +35,8 @@ export default function ProductRange() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 auto-rows-[300px]">
         
         {/* 1. Skin Care (Tall) */}
-        <div 
-          className="relative lg:row-span-2 lg:col-span-2 bg-[#c4c8ce4f] flex flex-col items-center justify-end group cursor-pointer overflow-hidden"
+        <Link href={'/products'} 
+          className="relative lg:row-span-2 lg:col-span-2 bg-[#c4c8ce4f] flex flex-col items-center justify-end group  overflow-hidden"
           onMouseEnter={() => setHoveredIndex(0)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
@@ -60,11 +61,11 @@ export default function ProductRange() {
             </div>
 
           </div>
-        </div>
+        </Link>
 
         {/* 2. Men's Grooming */}
-        <div 
-          className="relative flex flex-col lg:col-span-2 items-center justify-end group cursor-pointer overflow-hidden"
+        <Link href={'/products'} 
+          className="relative flex flex-col lg:col-span-2 items-center justify-end group  overflow-hidden"
           onMouseEnter={() => setHoveredIndex(5)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
@@ -88,11 +89,11 @@ export default function ProductRange() {
               <h3 className="text-black/80 w-fit mx-auto text-xl font-semibold tracking-widest uppercase">Men's Grooming</h3>
             </div>
           </div>
-        </div>
+        </Link>
 
         {/* 3. Baby Care */}
-        <div 
-          className="relative flex flex-col lg:col-span-2 items-center justify-end group cursor-pointer overflow-hidden"
+        <Link href={'/products'} 
+          className="relative flex flex-col lg:col-span-2 items-center justify-end group  overflow-hidden"
           onMouseEnter={() => setHoveredIndex(1)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
@@ -116,11 +117,11 @@ export default function ProductRange() {
               <h3 className="text-black/80 w-fit mx-auto text-xl font-semibold tracking-widest uppercase">Baby Care</h3>
             </div>
           </div>
-        </div>
+        </Link>
 
         {/* 4. Pet Care */}
-        <div 
-          className="relative flex flex-col lg:col-span-2 items-center justify-end group cursor-pointer overflow-hidden"
+        <Link href={'/products'} 
+          className="relative flex flex-col lg:col-span-2 items-center justify-end group  overflow-hidden"
           onMouseEnter={() => setHoveredIndex(8)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
@@ -144,11 +145,11 @@ export default function ProductRange() {
               <h3 className="text-black/80 w-fit mx-auto text-xl font-semibold tracking-widest uppercase">Pet Care</h3>
             </div>
           </div>
-        </div>
+        </Link>
 
         {/* 5. Mother Care (Tall) */}
-        <div 
-          className="relative lg:row-span-2 lg:col-span-2 flex flex-col items-center justify-end group cursor-pointer overflow-hidden"
+        <Link href={'/products'} 
+          className="relative lg:row-span-2 lg:col-span-2 flex flex-col items-center justify-end group  overflow-hidden"
           onMouseEnter={() => setHoveredIndex(4)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
@@ -172,11 +173,11 @@ export default function ProductRange() {
               <h3 className="text-black/80 w-fit mx-auto text-xl font-semibold tracking-widest uppercase">Mother Care</h3>
             </div>
           </div>
-        </div>
+        </Link>
 
         {/* 7. Lip Care */}
-        <div 
-          className="relative flex flex-col lg:col-span-2 items-center justify-end group cursor-pointer overflow-hidden"
+        <Link href={'/products'} 
+          className="relative flex flex-col lg:col-span-2 items-center justify-end group  overflow-hidden"
           onMouseEnter={() => setHoveredIndex(7)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
@@ -200,15 +201,15 @@ export default function ProductRange() {
               <h3 className="text-black/80 w-fit mx-auto text-xl font-semibold tracking-widest uppercase">Lip Care</h3>
             </div>
           </div>
-        </div>
+        </Link>
 
         {/* 6. Intimate Care */}
-        <div 
-          className="relative flex flex-col lg:row-span-2 lg:col-span-2 items-center justify-end group cursor-pointer overflow-hidden"
+        <Link href={'/products'} 
+          className="relative flex flex-col lg:row-span-2 lg:col-span-2 items-center justify-end group  overflow-hidden"
           onMouseEnter={() => setHoveredIndex(6)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
-          <Image fill src="/p4.webp" alt="Hygiene" className="absolute inset-0 w-full h-full object-cover mix-blend-multiply " />
+          <Image fill src="/p2.webp" alt="Hygiene" className="absolute inset-0 w-full h-full object-cover mix-blend-multiply " />
           <div className="relative z-10 w-full">
  
             {/* Expandable Item List on Hover */}
@@ -225,14 +226,14 @@ export default function ProductRange() {
               </ul>
             </div>
                        <div className="bg-[#c4c8ce9c] w-full backdrop-blur-2xl text-center py-2">
-              <h3 className="text-black/80 w-fit mx-auto text-xl font-semibold tracking-widest uppercase">Intimate Care</h3>
+              <h3 className="text-black/80 w-fit mx-auto text-xl font-semibold tracking-widest uppercase">Hygiene</h3>
             </div>
           </div>
-        </div>
+        </Link>
 
         {/* 8. Foot Care */}
-        <div 
-          className="relative lg:col-span-2 flex flex-col items-center justify-end group cursor-pointer overflow-hidden"
+        <Link href={'/products'} 
+          className="relative lg:col-span-2 flex flex-col items-center justify-end group  overflow-hidden"
           onMouseEnter={() => setHoveredIndex(3)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
@@ -256,15 +257,15 @@ export default function ProductRange() {
               <h3 className="text-black/80 w-fit mx-auto text-xl font-semibold tracking-widest uppercase">Foot Care</h3>
             </div>
           </div>
-        </div>
+        </Link>
 
         {/* 9. Hygiene */}
-        <div 
-          className="relative lg:col-span-2 flex flex-col items-center justify-end group cursor-pointer overflow-hidden"
+        <Link href={'/products'} 
+          className="relative lg:col-span-2 flex flex-col items-center justify-end group  overflow-hidden"
           onMouseEnter={() => setHoveredIndex(2)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
-          <Image fill src="/p2.webp" alt="Hygiene" className="absolute inset-0 w-full h-full object-cover mix-blend-multiply " />
+          <Image fill src="/p4.webp" alt="Hygiene" className="absolute inset-0 w-full h-full object-cover mix-blend-multiply " />
           <div className="relative z-10 w-full">
        
             {/* Expandable Item List on Hover */}
@@ -281,10 +282,10 @@ export default function ProductRange() {
               </ul>
             </div>
                  <div className="bg-[#f7d2e838] w-full backdrop-blur-2xl text-center py-2">
-              <h3 className="text-black/80 w-fit mx-auto text-xl font-semibold tracking-widest uppercase">Hygiene</h3>
+              <h3 className="text-black/80 w-fit mx-auto text-xl font-semibold tracking-widest uppercase">Intimate Care</h3>
             </div>
           </div>
-        </div>
+        </Link>
 
       </div>
     </section>
@@ -329,7 +330,7 @@ export default function ProductRange() {
 //         <div 
 //                   onMouseEnter={() => setHoveredIndex(0)}
 //           onMouseLeave={() => setHoveredIndex(null)}
-//         className="relative lg:row-span-2 lg:col-span-2 bg-[#c4c8ce4f] flex flex-col items-center justify-end group cursor-pointer overflow-hidden">
+//         className="relative lg:row-span-2 lg:col-span-2 bg-[#c4c8ce4f] flex flex-col items-center justify-end group  overflow-hidden">
 //           <Image fill src="/p1.webp" alt="Skin Care" className="absolute inset-0 w-full h-full object-cover mix-blend-multiply " />
 //           <div className="relative z-10 w-full backdrop-blur-2xl text-center py-2">
 //             <h3 className="text-black/80 w-fit mx-auto text-xl font-semibold tracking-widest uppercase">Skin Care</h3>
@@ -350,7 +351,7 @@ export default function ProductRange() {
 //         </div>
 
 //         {/* 2. Men's Grooming */}
-//         <div className="relative flex flex-col lg:col-span-2 items-center justify-end group cursor-pointer overflow-hidden">
+//         <div className="relative flex flex-col lg:col-span-2 items-center justify-end group  overflow-hidden">
 //           <Image fill src="/p3.webp" alt="Men's Grooming" className="absolute inset-0 w-full h-full object-cover mix-blend-multiply" />
 //           <div className="relative z-10 bg-[#f7d2e838] w-full backdrop-blur-2xl text-center py-2">
 //             <h3 className="text-black/80 w-fit mx-auto text-xl font-semibold tracking-widest uppercase">Men's Grooming</h3>
@@ -358,7 +359,7 @@ export default function ProductRange() {
 //         </div>
 
 //         {/* 3. Baby Care */}
-//         <div className="relative flex flex-col lg:col-span-2 items-center justify-end group cursor-pointer overflow-hidden">
+//         <div className="relative flex flex-col lg:col-span-2 items-center justify-end group  overflow-hidden">
 //           <Image fill src="/p7.webp" alt="Baby Care" className="absolute inset-0 w-full h-full object-cover mix-blend-multiply" />
 //           <div className="relative z-10 bg-[#f7d2e838] w-full backdrop-blur-2xl text-center py-2">
 //             <h3 className="text-black/80 w-fit mx-auto text-xl font-semibold tracking-widest uppercase">Baby Care</h3>
@@ -366,7 +367,7 @@ export default function ProductRange() {
 //         </div>
 
 //         {/* 4. Pet Care */}
-//         <div className="relative flex flex-col lg:col-span-2 items-center justify-end group cursor-pointer overflow-hidden">
+//         <div className="relative flex flex-col lg:col-span-2 items-center justify-end group  overflow-hidden">
 //           <Image fill src="/p6.webp" alt="Pet Care" className="absolute inset-0 w-full h-full object-cover mix-blend-multiply" />
 //           <div className="relative z-10 w-full bg-[#f7d2e838] backdrop-blur-2xl text-center py-2">
 //             <h3 className="text-black/80 w-fit mx-auto text-xl font-semibold tracking-widest uppercase">Pet Care</h3>
@@ -374,7 +375,7 @@ export default function ProductRange() {
 //         </div>
 
 //         {/* 5. Mother Care (Tall) */}
-//         <div className="relative lg:row-span-2 lg:col-span-2 flex flex-col items-center justify-end group cursor-pointer overflow-hidden">
+//         <div className="relative lg:row-span-2 lg:col-span-2 flex flex-col items-center justify-end group  overflow-hidden">
 //           <Image fill 
 //          src="/p9.webp" alt="Mother Care" className="absolute inset-0 w-full h-full object-cover mix-blend-multiply" />
 //           <div className="relative z-10 bg-[#eaabc71e] w-full backdrop-blur-2xl text-center py-2">
@@ -385,21 +386,21 @@ export default function ProductRange() {
       
 
 //         {/* 7. Lip Care */}
-//         <div className="relative  flex flex-col lg:col-span-2 items-center justify-end group cursor-pointer overflow-hidden">
+//         <div className="relative  flex flex-col lg:col-span-2 items-center justify-end group  overflow-hidden">
 //           <Image fill src="/p5.webp" alt="Lip Care" className="absolute inset-0 w-full h-full object-cover mix-blend-multiply" />
 //           <div className="relative bg-[#c4c8ce9c] z-10 w-full backdrop-blur-2xl text-center py-2">
 //             <h3 className="text-black/80 w-fit mx-auto text-xl font-semibold tracking-widest uppercase">Lip Care</h3>
 //           </div>
 //         </div>
 //   {/* 6. Intimate Care */}
-//         <div className="relative flex flex-col lg:row-span-2 lg:col-span-2 items-center justify-end group cursor-pointer overflow-hidden">
+//         <div className="relative flex flex-col lg:row-span-2 lg:col-span-2 items-center justify-end group  overflow-hidden">
 //           <Image fill src="/p2.webp" alt="Hygiene" className="absolute inset-0 w-full h-full object-cover mix-blend-multiply" />
 //           <div className="relative bg-[#c4c8ce9c] z-10 w-full backdrop-blur-2xl text-center py-2">
 //             <h3 className="text-black/80 w-fit mx-auto text-xl font-semibold tracking-widest uppercase">Hygiene</h3>
 //           </div>
 //         </div>
 //         {/* 8. Foot Care */}
-//         <div className="relative lg:col-span-2 flex flex-col items-center justify-end group cursor-pointer overflow-hidden">
+//         <div className="relative lg:col-span-2 flex flex-col items-center justify-end group  overflow-hidden">
 //           <Image fill src="/p8.webp" alt="Foot Care" className="absolute inset-0 w-full h-full object-cover object-bottom mix-blend-multiply" />
 //           <div className="relative bg-[#c4c8ce9c] z-10 w-full backdrop-blur-2xl text-center py-2">
 //             <h3 className="text-black/80 w-fit mx-auto text-xl font-semibold tracking-widest uppercase">Foot Care</h3>
@@ -407,7 +408,7 @@ export default function ProductRange() {
 //         </div>
 
 //         {/* 9. Hygiene (Spans 2 columns to fill the remaining space) */}
-//         <div className="relative lg:col-span-2 flex flex-col items-center justify-end group cursor-pointer overflow-hidden">
+//         <div className="relative lg:col-span-2 flex flex-col items-center justify-end group  overflow-hidden">
 //           <Image fill src="/p4.webp" alt="Intimate Care" className="absolute inset-0 w-full h-full object-cover mix-blend-multiply" />
 //           <div className="relative bg-[#f7d2e838] z-10 w-full backdrop-blur-2xl text-center py-2">
 //             <h3 className="text-black/80 w-fit mx-auto text-xl font-semibold tracking-widest uppercase">Intimate Care </h3>
