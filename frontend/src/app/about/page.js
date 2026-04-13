@@ -12,20 +12,12 @@ import About from "../components/about/About";
 export default function AboutPage() {
   return (
     <main className="overflow-hidden">
-
       <Banner />
-      
-     <About />
+      <About />
       <PhilosophySection />
       <ClienteleSection />
-      
-
-      <CapabilitiesSection />
-      
-
+      <CapabilitiesSection />  
       <VisionMission />
-      
-
     </main>
   );
 }

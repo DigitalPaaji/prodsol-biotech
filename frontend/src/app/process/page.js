@@ -8,7 +8,6 @@ function page() {
   return (
     <div>
         <HeroBanner/>
-
         <Steps/>
         <ServicesSection/>
 

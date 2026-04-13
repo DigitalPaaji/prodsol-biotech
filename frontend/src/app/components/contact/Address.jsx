@@ -61,7 +61,9 @@ const ContactPage = () => {
           },
           body: JSON.stringify({
             formdata: formData,
-            sendto: ["info@prodsolbiotech.com"],
+            sendto: ["pahujakashish18@gmail.com"],
+
+            // sendto: ["info@prodsolbiotech.com"],
             subject: "Website Query",
           }),
         },

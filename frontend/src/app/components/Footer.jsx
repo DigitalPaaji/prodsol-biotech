@@ -17,8 +17,6 @@ const footerSections = {
       { name: 'Contact Us', href: '/contact' },
     ]
   },
-
-
 };
 
 
@@ -44,7 +42,7 @@ const footerSections = {
               href="/"
               className="text-2xl text-[#005D4F] lg:text-3xl font-bold tracking-tight group "
             >
-               <Image width={'240'} className="w-fit  h-[80px]"        height={'80'} alt={' '} src={'/logo2.png' }/>
+               <Image width={'240'} className="w-fit h-20"        height={'80'} alt={' '} src={'/logo2.png' }/>
              
             </Link>
           </div>
@@ -143,7 +141,9 @@ Patiala, Punjab
      
             {/* Copyright */}
             <div className="text-gray-400 text-center pt-8">
-              <p>&copy; {new Date().getFullYear()} Prodsol Biotech Pvt. Ltd.. All rights reserved.</p>
+              <p>&copy; {new Date().getFullYear()} Prodsol Biotech Pvt. Ltd. All rights reserved. Crash By
+<a href="https://digitalpaaji.com" className='text-[#007e44]'> Digital Paaji
+</a> </p>
             </div>
  
       </div>
