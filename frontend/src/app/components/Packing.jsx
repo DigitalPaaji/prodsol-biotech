@@ -1,6 +1,7 @@
 import React from "react";
 import { ArrowRight, Package, Sparkles, Leaf, Palette } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function PackagingInnovation() {
 
@@ -15,7 +16,7 @@ export default function PackagingInnovation() {
             Packaging & Innovation
           </h2>
           <h3 className="text-3xl md:text-4xl font-medium text-gray-900 mb-6 leading-tight relative">
-            Designing solutions that refflect your brand identity
+            Designing solutions that reflect your brand identity
                <span className="block w-16 h-0.5 bg-black absolute -bottom-3 left-0"></span>
           </h3>
           <p className="text-gray-600 mb-6 text-base leading-relaxed">
@@ -36,10 +37,10 @@ export default function PackagingInnovation() {
             solutions that bring your brand to life -beautifully and
             sustainably.
           </p>
-          <button className="group flex items-center gap-2 text-[#2F7E44] font-medium hover:text-[#1f5a30] transition-colors">
+          <Link href={'/process'} className="group flex items-center gap-2 text-[#2F7E44] font-medium hover:text-[#1f5a30] transition-colors">
             <span>Read More</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </button>
+          </Link>
         </div>
 
         {/* Right Column - Image */}

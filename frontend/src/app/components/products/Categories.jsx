@@ -219,9 +219,9 @@ export default function ProductPortfolio() {
               </div>
             </div>
 
-            <button className="mt-12 flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-[#007e44] hover:gap-5 transition-all w-fit">
+            {/* <button className="mt-12 flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-[#007e44] hover:gap-5 transition-all w-fit">
               Request Formulation Details <ChevronRight className="w-4 h-4" />
-            </button>
+            </button> */}
           </div>
 
           {/* Image Side - Adjusted for better visibility */}

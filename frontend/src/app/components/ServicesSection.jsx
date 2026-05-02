@@ -21,7 +21,7 @@ export default function ServicesSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
           
           {/* Main Left Card (Reverted to single static image that zooms slightly) */}
-          <div className="lg:col-span-5 flex flex-col bg-white overflow-hidden shadow-sm border border-gray-100 group cursor-pointer hover:shadow-md transition-all duration-300">
+          <div className="lg:col-span-5 flex flex-col bg-white overflow-hidden shadow-sm border border-gray-100 group hover:shadow-md transition-all duration-300">
             <div className="h-64 sm:h-80 w-full relative bg-gray-200 overflow-hidden">
               <Image fill src="/s1.webp" 
                 alt="Cosmetic Bottles" 
@@ -33,7 +33,7 @@ export default function ServicesSection() {
               <h3 className="text-xl md:text-2xl font-medium uppercase mb-4 text-[#007e44]">
                 Private Label Solutions
               </h3>
-              <p className="text-base text-gray-600 leading-relaxed mb-8 flex-grow">
+              <p className="text-base text-gray-600 leading-relaxed mb-8 grow">
 Ready-to-market cosmetic products customized with your branding. Ideal for start-ups and growing brands looking to launch quickly using proven, high-quality formulations.
               </p>
         
@@ -44,7 +44,7 @@ Ready-to-market cosmetic products customized with your branding. Ideal for start
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
             
             {/* Card 1: Contract Manufacturing (Hover reveals image) */}
-            <div className="relative p-8  flex flex-col shadow-sm border border-gray-100 bg-white overflow-hidden group cursor-pointer hover:shadow-md transition-all duration-500">
+            <div className="relative p-8  flex flex-col shadow-sm border border-gray-100 bg-white overflow-hidden group hover:shadow-md transition-all duration-500">
               <div className="absolute inset-0 z-0">
                 <Image fill src="/s6.webp" alt="Manufacturing" className="w-full h-full object-cover opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" />
                 <div className="absolute inset-0 bg-linear-to-br from-black/40 via-black/40 to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -61,7 +61,7 @@ Ready-to-market cosmetic products customized with your branding. Ideal for start
             </div>
 
             {/* Card 2: Product Development (Hover reveals image) */}
-            <div className="relative p-8  flex flex-col shadow-sm border border-gray-100 bg-white overflow-hidden group cursor-pointer hover:shadow-md transition-all duration-500">
+            <div className="relative p-8  flex flex-col shadow-sm border border-gray-100 bg-white overflow-hidden group hover:shadow-md transition-all duration-500">
               <div className="absolute inset-0 z-0">
                 <Image fill 
               src="/s7.webp"
@@ -80,7 +80,7 @@ Ready-to-market cosmetic products customized with your branding. Ideal for start
             </div>
 
             {/* Card 3: Regulatory & Compliance (Hover reveals image) */}
-             <div className="relative p-8  flex flex-col shadow-sm border border-gray-100 bg-white overflow-hidden group cursor-pointer hover:shadow-md transition-all duration-500">
+             <div className="relative p-8  flex flex-col shadow-sm border border-gray-100 bg-white overflow-hidden group hover:shadow-md transition-all duration-500">
               <div className="absolute inset-0 z-0">
                 <Image fill src="/s4.webp" alt="Compliance" className="w-full h-full object-cover opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" />
                 <div className="absolute inset-0 bg-linear-to-b from-black/70 via-text-black/50 to-text-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -97,7 +97,7 @@ Ready-to-market cosmetic products customized with your branding. Ideal for start
             </div>
 
             {/* Card 4: Logistics & Delivery (Hover reveals image) */}
-            <div className="relative p-8  flex flex-col shadow-sm border border-gray-100 bg-white overflow-hidden group cursor-pointer hover:shadow-md transition-all duration-500">
+            <div className="relative p-8  flex flex-col shadow-sm border border-gray-100 bg-white overflow-hidden group hover:shadow-md transition-all duration-500">
               <div className="absolute inset-0 z-0">
                 <Image fill src="/s9.webp" alt="Logistics" className="w-full h-full object-cover opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" />
                 <div className="absolute inset-0 bg-linear-to-b from-black/60 via-black/50 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>

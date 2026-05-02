@@ -144,9 +144,9 @@ const ContactPage = () => {
             </div>
             <h3 className="font-medium font-serif text-md mb-2">OUR CONTACT</h3>
             <p className=" text-gray-500 leading-relaxed">
-              +91 94591-01919
+              +91 9459 101 919
               <br />
-              Mon-Sat: 09AM - 06PM
+              Mon-Sat: 09:00 AM - 06:00 PM
             </p>
           </div>
 

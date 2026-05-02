@@ -56,7 +56,7 @@ built on innovation, quality, and sustainability!
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-gray-800 hover:text-[#005D4F] transition-colors duration-300">
                 <FiPhone className="w-5 h-5" />
-                <span>+91 94591-01919</span>
+                <span>+91 9459 101 919</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-800 hover:text-[#005D4F] transition-colors duration-300">
                 <FiMail className="w-5 h-5" />

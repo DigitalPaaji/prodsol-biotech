@@ -1,5 +1,6 @@
 'use client'
 import Image from 'next/image'
+import Link from 'next/link'
 import React, { useState, useEffect, useRef } from 'react'
 
 const Banner = () => {
@@ -234,12 +235,12 @@ const Banner = () => {
 
                   <div className={`w-16 h-px bg-gray-300 my-3 ${getAnimationClass('animate-scale-x', 'animation-delay-800')} mx-auto`}></div>
 
-                  <button className={`group inline-flex items-center gap-2 text-sm tracking-wider text-gray-700 hover:text-gray-900 transition-colors duration-300 ${getAnimationClass('animate-fade-in-up', 'animation-delay-1000')}`}>
+                  <Link href={'/products'} className={`group inline-flex items-center gap-2 text-sm tracking-wider text-gray-700 hover:text-gray-900 transition-colors duration-300 ${getAnimationClass('animate-fade-in-up', 'animation-delay-1000')}`}>
                     <span>DISCOVER MORE</span>
                     <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
-                  </button>
+                  </Link>
                 </div>
               </div> 
               {/* Image first - full width, no background */}
@@ -287,12 +288,12 @@ const Banner = () => {
 
                   <div className={`w-16 h-px bg-gray-300 my-6 ${getAnimationClass('animate-scale-x', 'animation-delay-800')}`}></div>
 
-                  <button className={`group inline-flex items-center gap-2 text-sm tracking-wider text-gray-700 hover:text-gray-900 transition-colors duration-300 ${getAnimationClass('animate-fade-in-up', 'animation-delay-1000')}`}>
+                  <Link href={'/products'} className={`group inline-flex items-center gap-2 text-sm tracking-wider text-gray-700 hover:text-gray-900 transition-colors duration-300 ${getAnimationClass('animate-fade-in-up', 'animation-delay-1000')}`}>
                     <span>DISCOVER MORE</span>
                     <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
-                  </button>
+                  </Link>
                 </div>
               </div>
 
