@@ -30,7 +30,7 @@ export default function ServicesSection() {
             </div>
             <div className="p-8 flex flex-col grow relative z-10 bg-white">
               <p className=" text-base mb-3">Complete solutions for your cosmetic brand.</p>
-              <h3 className="text-xl md:text-2xl font-medium uppercase mb-4 text-[#007e44]">
+              <h3 className="text-xl md:text-2xl font-medium uppercase mb-4 text-[#00385d]">
                 Private Label Solutions
               </h3>
               <p className="text-base text-gray-600 leading-relaxed mb-8 grow">
@@ -50,7 +50,7 @@ Ready-to-market cosmetic products customized with your branding. Ideal for start
                 <div className="absolute inset-0 bg-linear-to-br from-black/40 via-black/40 to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
               <div className="relative z-10 flex flex-col h-full">
-                <h3 className="text-lg font-medium uppercase mb-4 text-[#007e44] group-hover:text-white transition-colors duration-300">
+                <h3 className="text-lg font-medium uppercase mb-4 text-[#00385d] group-hover:text-white transition-colors duration-300">
                   Contract Manufacturing
                 </h3>
                 <p className="text-base text-gray-600 group-hover:text-gray-200 leading-relaxed mb-8 grow transition-colors duration-300">
@@ -69,7 +69,7 @@ Ready-to-market cosmetic products customized with your branding. Ideal for start
                 <div className="absolute inset-0 bg-linear-to-b from-black/50 via-black/40 to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
               <div className="relative z-10 flex flex-col h-full">
-                <h3 className="text-lg font-medium uppercase mb-4 text-[#007e44] group-hover:text-white transition-colors duration-300">
+                <h3 className="text-lg font-medium uppercase mb-4 text-[#00385d] group-hover:text-white transition-colors duration-300">
                   Product Development
                 </h3>
                 <p className="text-base text-gray-600 group-hover:text-gray-200 leading-relaxed mb-8 flex-grow transition-colors duration-300">
@@ -86,7 +86,7 @@ Ready-to-market cosmetic products customized with your branding. Ideal for start
                 <div className="absolute inset-0 bg-linear-to-b from-black/70 via-text-black/50 to-text-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
               <div className="relative z-10 flex flex-col h-full">
-                <h3 className="text-lg font-medium uppercase mb-4 text-[#007e44] group-hover:text-white transition-colors duration-300">
+                <h3 className="text-lg font-medium uppercase mb-4 text-[#00385d] group-hover:text-white transition-colors duration-300">
                   Regulatory & Compliance Support
                 </h3>
                 <p className="text-base text-gray-600 group-hover:text-gray-200 leading-relaxed mb-8 flex-grow transition-colors duration-300">
@@ -103,7 +103,7 @@ Ready-to-market cosmetic products customized with your branding. Ideal for start
                 <div className="absolute inset-0 bg-linear-to-b from-black/60 via-black/50 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
               <div className="relative z-10 flex flex-col h-full">
-                <h3 className="text-lg font-medium uppercase mb-4 text-[#007e44] group-hover:text-white transition-colors duration-300">
+                <h3 className="text-lg font-medium uppercase mb-4 text-[#00385d] group-hover:text-white transition-colors duration-300">
                   Logistics & Delivery
                 </h3>
                 <p className="text-base text-gray-600 group-hover:text-gray-200 leading-relaxed mb-8 grow transition-colors duration-300">

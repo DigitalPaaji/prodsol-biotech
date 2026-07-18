@@ -20,7 +20,9 @@ const Banner = () => {
       subtitle: "Contract Manufacturing",
       tagline: "FROM CONCEPT TO COSMETIC PERFECTION",
       imagePosition: "right",
-      image: "/product1.webp",
+      image: "/1.png",
+      // image: "/product1.webp",
+
       bgColor: "bg-[#EAEFEF]/60"
     },
     {
@@ -30,7 +32,7 @@ const Banner = () => {
       subtitle: "For Modern Beauty Brands",
       tagline: "WHERE SCIENCE MEETS BEAUTY",
       imagePosition: "right",
-      image: "/b1.png",
+      image: "/2.png",
       bgColor: "bg-white/50"
     },
 

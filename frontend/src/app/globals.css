@@ -39,7 +39,7 @@
 
   /* Outline effect */
   color: transparent;
-  -webkit-text-stroke: 1.2px #005D4F; /* border color */
+  -webkit-text-stroke: 1.2px #00385d; /* border color */
 }
 
 body {
@@ -68,4 +68,3 @@ html.lenis {
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
 }
-

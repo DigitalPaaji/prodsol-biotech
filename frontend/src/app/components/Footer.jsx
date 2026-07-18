@@ -40,7 +40,7 @@ const footerSections = {
             <div className="shrink-0">
  <Link
               href="/"
-              className="text-2xl text-[#005D4F] lg:text-3xl font-bold tracking-tight group "
+              className="text-2xl text-[#00385d] lg:text-3xl font-bold tracking-tight group "
             >
                <Image width={'240'} className="w-fit h-20"        height={'80'} alt={' '} src={'/logo2.png' }/>
              
@@ -54,23 +54,23 @@ built on innovation, quality, and sustainability!
             
             {/* Contact Info */}
             <div className="space-y-3">
-              <div className="flex items-center space-x-3 text-gray-800 hover:text-[#005D4F] transition-colors duration-300">
+              <div className="flex items-center space-x-3 text-gray-800 hover:text-[#00385d] transition-colors duration-300">
                 <FiPhone className="w-5 h-5" />
                 <span>+91 9459 101 919</span>
               </div>
-              <div className="flex items-center space-x-3 text-gray-800 hover:text-[#005D4F] transition-colors duration-300">
+              <div className="flex items-center space-x-3 text-gray-800 hover:text-[#00385d] transition-colors duration-300">
                 <FiMail className="w-5 h-5" />
                 <span>info@prodsolbiotech.com
 </span>
               </div>
-              <div className="flex items-center space-x-3 text-gray-800 hover:text-[#005D4F] transition-colors duration-300">
+              <div className="flex items-center space-x-3 text-gray-800 hover:text-[#00385d] transition-colors duration-300">
                 <FiMapPin className="w-5 h-5" />
                 <span>
 C-163, Focal Point,
 Patiala, Punjab - 147001
 </span>
               </div>
-                            {/* <div className="flex items-center space-x-3 text-gray-800 hover:text-[#005D4F] transition-colors duration-300">
+                            {/* <div className="flex items-center space-x-3 text-gray-800 hover:text-[#00385d] transition-colors duration-300">
                 <FiMapPin className="w-5 h-5" />
                 <span>
 #111, Street No. 8, Aman Vihar,
@@ -83,7 +83,7 @@ Patiala, Punjab
 {/* Footer Links */}
 {Object.entries(footerSections).map(([key, section]) => (
   <div key={key} className="lg:col-span-3">
-    <h3 className=" text-lg text-[#005D4F] font-semibold my-4 relative inline-block">
+    <h3 className=" text-lg text-[#00385d] font-semibold my-4 relative inline-block">
       {section.title}
       <span className="absolute bottom-0 left-0 w-full h-0.5  transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
     </h3>
@@ -93,9 +93,9 @@ Patiala, Punjab
         <li key={index}>
           <Link
             href={link.href}
-            className="text-gray-800 hover:text-[#005D4F] transition-all duration-300 hover:pl-2 group flex items-center"
+            className="text-gray-800 hover:text-[#00385d] transition-all duration-300 hover:pl-2 group flex items-center"
           >
-            <span className="w-1 h-1 bg-[#005D4F]  rounded-full opacity-0 group-hover:opacity-100 mr-2 transition-all duration-300"></span>
+            <span className="w-1 h-1 bg-[#00385d]  rounded-full opacity-0 group-hover:opacity-100 mr-2 transition-all duration-300"></span>
             {link.name}
           </Link>
         </li>
@@ -125,7 +125,7 @@ Patiala, Punjab
                 <a
                   key={social.label}
                   href={social.href}
-                  className="w-12 h-12 bg-black/10 rounded-xl flex items-center justify-center hover:text-white  hover:bg-[#005D4F] transition-all duration-300 hover:scale-110 group"
+                  className="w-12 h-12 bg-black/10 rounded-xl flex items-center justify-center hover:text-white  hover:bg-[#00385d] transition-all duration-300 hover:scale-110 group"
                   aria-label={social.label}
                 >
                   <social.icon className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
@@ -142,7 +142,7 @@ Patiala, Punjab
             {/* Copyright */}
             <div className="text-gray-400 text-center pt-8">
               <p>&copy; {new Date().getFullYear()} Prodsol Biotech Pvt. Ltd. All rights reserved. Crash By
-<a href="https://digitalpaaji.com" className='text-[#007e44]'> Digital Paaji
+<a href="https://digitalpaaji.com" className='text-[#00385d]'> Digital Paaji
 </a> </p>
             </div>
  
@@ -152,14 +152,14 @@ Patiala, Punjab
 
       {/* Add CSS for golden color */}
       <style jsx global>{`
-        .text-[#005D4F] {
-          color: #005D4F;
+        .text-[#00385d] {
+          color: #00385d;
         }
-        .bg-[#005D4F] {
-          background-color: #005D4F;
+        .bg-[#00385d] {
+          background-color: #00385d;
         }
-        .border-[#005D4F] {
-          border-color: #005D4F;
+        .border-[#00385d] {
+          border-color: #00385d;
         }
       `}</style>
     </footer>

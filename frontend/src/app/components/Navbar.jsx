@@ -51,7 +51,7 @@ const Navbar = () => {
           <div className="shrink-0">
             <Link
               href="/"
-              className="text-2xl text-[#007e44] lg:text-3xl font-bold tracking-tight group "
+              className="text-2xl text-[#00385d] lg:text-3xl font-bold tracking-tight group "
             >
                <Image width={'1080'} className="w-full h-[70px] lg:h-[80px]  nobject-cover" height={'80'} alt={' '} src={'/logo2.png' }/>
              
@@ -68,7 +68,7 @@ const Navbar = () => {
                   className="relative px-4 py-2 text-black/80 hover:text-black text-base font-medium transition-all duration-200 group"
                 >
                   {link.name}
-                  <span className="absolute inset-x-4 bottom-0 h-0.5 bg-[#007e44] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left" />
+                  <span className="absolute inset-x-4 bottom-0 h-0.5 bg-[#00385d] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left" />
                 </Link>
               ))}
             </div>

@@ -33,7 +33,7 @@ export default function WhyChooseUs() {
       
       {/* Heading */}
       <div className="text-center mb-16 px-4 sm:px-6 lg:px-16 xl:px-24 2xl:px-52">
-        <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#007e44] border-b border-gray-200 pb-2">
+        <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#00385d] border-b border-gray-200 pb-2">
           The Prodsol Standard
         </span>
 
@@ -51,7 +51,7 @@ export default function WhyChooseUs() {
       <div className="flex justify-center gap-16 items-center flex-wrap lg:flex-nowrap">
         
      
-          
+      
         {/* RIGHT FEATURES LIST */}
         <div className="space-y-10  px-4 sm:px-6 lg:pl-16 xl:pl-24 2xl:pl-52 w-full lg:w-[50%] ">
           {features.map((item, index) => (
@@ -80,16 +80,18 @@ export default function WhyChooseUs() {
             </div>
           ))}
         </div>
-   {/* LEFT IMAGE */}
+
+        
+     {/* LEFT IMAGE */}
         <div className="relative w-full lg:w-[50%] ">
           <Image
-            src="/10.webp"   // ← your main big image
+            src="/10.png"   // ← your main big image
             alt="Cosmetic Product"
             width={1920}
             height={1080}
             className="object-contain"
           />
-        </div>
+        </div>  
       </div>
     </section>
   );

@@ -21,7 +21,7 @@ export default function ClienteleSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-16 xl:px-24 2xl:px-40">
         
         <div className="text-center mb-16">
-          <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#007e44] pb-2">
+          <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#00385d] pb-2">
             Our Growth & Clientele
           </span>
 
@@ -53,7 +53,7 @@ export default function ClienteleSection() {
                   key={`${client.name}-${index}`}
                   className="shrink-0"
                 >
-                  <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 w-[180px] h-[120px] flex items-center justify-center group hover:border-[#007e44]/20">
+                  <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 w-[180px] h-[120px] flex items-center justify-center group hover:border-[#00385d]/20">
                     <Image
                       src={client.logo}
                       alt={client.name}

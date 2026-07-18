@@ -1,3 +1,17 @@
+// import React from 'react'
+
+// function page() {
+//   return (
+//     <div>
+//       hi my name is kashish
+//     </div>
+//   )
+// }
+
+// export default page
+
+
+
 import React from 'react'
 import Banner from './components/Banner'
 import ServicesSection from './components/ServicesSection'
