@@ -53,7 +53,7 @@ export default function HeroBanner() {
                   Home
                 </Link>
                 <span className="text-white/70">/</span>
-                <span className="text-[#db0e18] font-medium">Contact Us</span>
+                <span className="text-[#fdeb44de] font-medium">Contact Us</span>
               </div>
             </div>
           </div>

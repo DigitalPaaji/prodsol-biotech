@@ -205,7 +205,7 @@ export default async function ProductCategoryPage({ params }) {
                 {/* About Us Heading */}
                 <h1 className=" text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-2 md:mb-4 leading-tight">
                   {category.title}
-                  <span className="mt-2 block font-serif text-3xl italic text-[#fdeb44de] sm:text-4xl lg:text-5xl">
+                  <span className="mt-2 block font-serif text-lg md:text-3xl italic text-[#fdeb44de] sm:text-4xl lg:text-5xl">
                     manufacturing solutions
                   </span>
                 </h1>
@@ -229,77 +229,7 @@ export default async function ProductCategoryPage({ params }) {
         </div>
       </div>
 
-      {/* <section className="relative min-h-">
-        <div className="absolute inset-0">
-          <img
-            src={category.image}
-            alt={`${category.title} manufacturing`}
-            className={`h-full w-full object-cover ${category.imagePosition}`}
-          />
-
-          <div className={`absolute inset-0 ${category.overlay}`} />
-
-          <div className="absolute inset-0 bg-gradient-to-r from-[#f8faf8] via-[#f8faf8]/65 to-[#f8faf8]/10" />
-
-          <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
-        </div>
-
-        <div className="relative flex min-h-[720px] items-center py-24 px-4 sm:px-6 lg:px-16 xl:px-24 2xl:px-52">
-          <div className="max-w-3xl">
-            <Link
-              href="/products"
-              className="mb-9 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-[#00385d]"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              Explore All Categories
-            </Link>
-
-
-            <p className="mb-5 text-xs font-bold uppercase tracking-[0.3em] text-[#00385d]">
-              Private Label & Contract Manufacturing
-            </p>
-
-            <h1 className="max-w-3xl text-5xl font-light leading-[1.05] text-gray-950 sm:text-5xl lg:text-6xl">
-              {category.title}
-              <span className="mt-2 block font-serif text-3xl italic text-[#00385d] sm:text-4xl lg:text-5xl">
-                manufacturing solutions
-              </span>
-            </h1>
-
-        
-
-
-            <div className="mt-12 flex flex-wrap gap-x-10 gap-y-4 border-t border-gray-300/60 pt-7">
-              <div>
-                <p className="text-3xl font-light text-gray-900">
-                  {category.items.length}+
-                </p>
-                <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.18em] text-gray-500">
-                  Available Products
-                </p>
-              </div>
-
-              <div>
-                <p className="text-3xl font-light text-gray-900">
-                  Custom
-                </p>
-                <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.18em] text-gray-500">
-                  Formulation Support
-                </p>
-              </div>
-
-              <div>
-                <p className="text-3xl font-light text-gray-900">
-                  End-to-End
-                </p>
-                <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.18em] text-gray-500">
-                  Manufacturing
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
+    
 
       {/* Capabilities */}
       <section className="px-4 sm:px-6 lg:px-16 xl:px-24 2xl:px-52">
@@ -310,7 +240,7 @@ export default async function ProductCategoryPage({ params }) {
                 Manufacturing Capabilities
               </p>
 
-              <h2 className="max-w-3xl text-4xl font-light leading-tight text-gray-900 sm:text-5xl">
+              <h2 className="max-w-3xl text-2xl md:text-4xl font-light leading-tight text-gray-900 sm:text-5xl">
                 Flexible solutions for established and emerging brands.
               </h2>
             </div>
@@ -461,7 +391,7 @@ export default async function ProductCategoryPage({ params }) {
 
           {/* Product Grid */}
          {/* Product Grid */}
-<div className="grid gap-px overflow-hidden border border-gray-200 bg-gray-200 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+<div className="grid gap-px overflow-hidden border border-gray-200 bg-gray-200 grid-cols-2 lg:grid-cols-4 xl:grid-cols-5">
   {category.items.map((product, index) => (
     <article
       key={product}
@@ -591,7 +521,7 @@ export default async function ProductCategoryPage({ params }) {
               Packaging Solutions
             </p>
 
-            <h2 className="max-w-xl text-4xl font-light leading-tight text-gray-900 sm:text-5xl">
+            <h2 className="max-w-xl text-3xl font-light leading-tight text-gray-900 sm:text-5xl">
               Packaging selected for function, presentation and market fit.
             </h2>
 
@@ -650,7 +580,7 @@ export default async function ProductCategoryPage({ params }) {
       </section>
 
       {/* CTA */}
-      <section className="relative overflow-hidden bg-[#00385d] px-4 sm:px-6 lg:px-16 xl:px-24 2xl:px-52">
+      {/* <section className="relative overflow-hidden bg-[#00385d] px-4 sm:px-6 lg:px-16 xl:px-24 2xl:px-52">
         <div className="absolute -right-28 -top-28 h-96 w-96 rounded-full border border-white/10" />
         <div className="absolute -bottom-48 right-20 h-96 w-96 rounded-full border border-white/10" />
 
@@ -679,7 +609,7 @@ export default async function ProductCategoryPage({ params }) {
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
-      </section>
+      </section> */}
 
       {/* Previous / Next Navigation */}
       <nav className="px-4 sm:px-6 lg:px-16 xl:px-24 2xl:px-52 grid border-x border-gray-100 md:grid-cols-2">

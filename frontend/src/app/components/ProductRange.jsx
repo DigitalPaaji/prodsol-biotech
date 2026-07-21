@@ -26,7 +26,7 @@ export default function ProductRange() {
     id: 1,
     name: "Skin Care",
     slug: "skin-care",
-    image: "/p01.webp",
+    image: "/p1.webp",
     layout: "lg:row-span-2 lg:col-span-2",
     imagePosition: "object-center",
     overlay: "bg-[#e6e0db]/55",
@@ -539,7 +539,7 @@ export default function ProductRange() {
 
 
   return (
-<section className="px-4 py-16 text-center sm:px-6 lg:px-16 xl:px-24 2xl:px-52">
+<section className="px-4 pt-24 text-center sm:px-6 lg:px-16 xl:px-24 2xl:px-52">
   <div className="mb-16 text-center">
     <h2 className="relative mb-6 inline-block text-3xl font-medium tracking-wide text-gray-900 md:text-4xl">
       Our Product Range

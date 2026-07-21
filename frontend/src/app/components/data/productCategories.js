@@ -106,7 +106,7 @@ export const categories = [
   {
     "id": 3,
     "slug": "baby-care",
-    "image": "/p7.webp",
+    "image": "/p07.webp",
     "layout": "lg:col-span-2",
     "imagePosition": "object-center",
     "overlay": "bg-[#f6e5da]/55",

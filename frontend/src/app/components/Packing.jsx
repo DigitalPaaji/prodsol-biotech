@@ -7,9 +7,9 @@ export default function PackagingInnovation() {
 
 
   return (
-    <section className="w-full px-6 lg:px-16 xl:px-24 2xl:px-40 py-24">
+    <section className="w-full px-6 lg:px-16 xl:px-24 2xl:px-40 pt-24">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-12">
-<div className="order-2 lg:order-2">
+<div className="order-1 lg:order-2">
   <h2 className="text-sm font-medium text-gray-600 tracking-wider mb-4">
     About Prodsol Biotech
   </h2>
@@ -46,7 +46,7 @@ export default function PackagingInnovation() {
 </div>
 
         {/* Right Column - Image */}
-        <div className="order-1 lg:order-1 w-full flex justify-center">
+        <div className="order-2 lg:order-1 w-full flex justify-center">
           <div className="relative w-full max-w-lg aspect-square overflow-hidden rounded-t-full">
             <Image
               src="/6.webp"

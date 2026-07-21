@@ -203,7 +203,7 @@ export default function ProductPortfolio() {
             </Link>
           </div>
 
-          {/* <div className="relative flex flex-1 items-center justify-center overflow-hidden border-l border-gray-100 bg-white">
+          <div className="relative flex flex-1 items-center justify-center overflow-hidden border-l border-gray-100 bg-white">
             <img
               key={activeCategory.slug}
               src={activeCategory.image}
@@ -213,7 +213,7 @@ export default function ProductPortfolio() {
             <div
               className={`pointer-events-none absolute inset-0 ${activeCategory.overlay}`}
             />
-          </div> */}
+          </div> 
         </div>
       </div>
 
