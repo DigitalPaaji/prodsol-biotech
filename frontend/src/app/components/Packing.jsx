@@ -37,7 +37,7 @@ export default function PackagingInnovation() {
   </p>
 
   <Link
-    href="/about-us"
+    href="/about"
     className="group flex items-center gap-2 text-[#00385d] font-medium hover:text-[#1f5a30] transition-colors"
   >
     <span>Explore Our Capabilities</span>
